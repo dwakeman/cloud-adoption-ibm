@@ -1,0 +1,910 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Manage your domain - IBM Cloud Adoption</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#manage-your-domain-with-ibm-cloud-internet-services" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="IBM Cloud Adoption" class="md-header-nav__button md-logo" aria-label="IBM Cloud Adoption">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            IBM Cloud Adoption
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Manage your domain
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/dwakeman/cloud-adoption-ibn" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="IBM Cloud Adoption" class="md-nav__button md-logo" aria-label="IBM Cloud Adoption">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IBM Cloud Adoption
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/dwakeman/cloud-adoption-ibn" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Resilient Applications
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Resilient Applications" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Resilient Applications
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ha-app/ha-app/" title="HA app considerations" class="md-nav__link">
+      HA app considerations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ha-app/create-env/" title="Creating the Environment" class="md-nav__link">
+      Creating the Environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ha-app/deploy-ha-app/" title="HA app deployment" class="md-nav__link">
+      HA app deployment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Disaster Recovery
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Disaster Recovery" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Disaster Recovery
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../disaster-recovery/disaster-recovery/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Custom Domains
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Custom Domains" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Custom Domains
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../create-domain/" title="Create a domain" class="md-nav__link">
+      Create a domain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Manage your domain
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Manage your domain" class="md-nav__link md-nav__link--active">
+      Manage your domain
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#provision-cloud-internet-services" class="md-nav__link">
+    Provision Cloud Internet Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-your-domain-to-cloud-internet-services" class="md-nav__link">
+    Add your domain to Cloud Internet Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-dns-records" class="md-nav__link">
+    Adding DNS records
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordering-origin-certificates" class="md-nav__link">
+    Ordering Origin Certificates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordering-edge-certificates" class="md-nav__link">
+    Ordering Edge Certificates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-your-domain-in-cloud-foundry-enterprise" class="md-nav__link">
+    Configuring your domain in Cloud Foundry Enterprise
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../domain-with-openshift/" title="Configure domain for OpenShift" class="md-nav__link">
+      Configure domain for OpenShift
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Infrastructure
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Infrastructure" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Infrastructure
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastructure/iac/" title="Infrastructure as Code (IaC)" class="md-nav__link">
+      Infrastructure as Code (IaC)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastructure/schematics/" title="Schematics" class="md-nav__link">
+      Schematics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastructure/vpc/" title="Virtual Private Cloud" class="md-nav__link">
+      Virtual Private Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../infrastructure/sds/" title="Software Defined Storage" class="md-nav__link">
+      Software Defined Storage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      IBM Cloud Platform
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="IBM Cloud Platform" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        IBM Cloud Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cloud-platform/openshift-ibm-cloud/" title="OpenShift on IBM Cloud" class="md-nav__link">
+      OpenShift on IBM Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cloud-platform/ibm-cloud-operator/" title="IBM Cloud Operator" class="md-nav__link">
+      IBM Cloud Operator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cloud-platform/key-protect/" title="Key Protect" class="md-nav__link">
+      Key Protect
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Hybrid Cloud
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Hybrid Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Hybrid Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../hybrid-cloud/hybrid/" title="Deploying a Hybrid Cloud Application" class="md-nav__link">
+      Deploying a Hybrid Cloud Application
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Developer Experience
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developer Experience" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developer Experience
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev-tools/dev-experience/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../dev-tools/crw/" title="CodeReady Workspaces" class="md-nav__link">
+      CodeReady Workspaces
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#provision-cloud-internet-services" class="md-nav__link">
+    Provision Cloud Internet Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-your-domain-to-cloud-internet-services" class="md-nav__link">
+    Add your domain to Cloud Internet Services
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-dns-records" class="md-nav__link">
+    Adding DNS records
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordering-origin-certificates" class="md-nav__link">
+    Ordering Origin Certificates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ordering-edge-certificates" class="md-nav__link">
+    Ordering Edge Certificates
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-your-domain-in-cloud-foundry-enterprise" class="md-nav__link">
+    Configuring your domain in Cloud Foundry Enterprise
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="manage-your-domain-with-ibm-cloud-internet-services">Manage your domain with IBM Cloud Internet Services</h1>
+<p>If you have your own domain you can manage it using IBM Cloud Internet Services.  This service provides a number of management, reliability, performance and security features for your domain.  You can learn more about IBM Cloud Internet Services <a href="https://cloud.ibm.com/docs/infrastructure/cis?topic=cis-getting-started" target="_blank">here</a>.</p>
+<h2 id="provision-cloud-internet-services">Provision Cloud Internet Services</h2>
+<p>The first steps to using Cloud Internet Services is to provision an instance of it in your IBM Cloud account.</p>
+<p>Login to IBM Cloud, navigate to the catalog and search for "internet".</p>
+<p><img alt="" src="../images/catalog-cis.png" /></p>
+<p>Click on the tile for Internet Services.</p>
+<p><img alt="" src="../images/cis-create-instance.png" /></p>
+<p>Select the Standard plan, scroll down and provide a name for your instance and a resource group, then click <code>Create</code>.  You will see the screen below, where you will add your domain to your CIS instance.</p>
+<p><img alt="" src="../images/cis-getting-started.png" /></p>
+<p>Click on the <code>Let's Get Started</code> button to continue.</p>
+<h2 id="add-your-domain-to-cloud-internet-services">Add your domain to Cloud Internet Services</h2>
+<p>You should seen the screen below.</p>
+<p><img alt="" src="../images/cis-add-domain.png" /></p>
+<p>Enter your domain in the screen above and click <code>Connect and Continue</code>.</p>
+<p><img alt="" src="../images/cis-import-dns-records.png" /></p>
+<p>If you have DNS records in your existing DNS provider you can export them and import them here.  In this case we don't have any existing records, so click <code>Next Step</code>.</p>
+<p>The next step is VERY IMPORTANT!  It tells your registrar (where you registered your domain) to delegate to CIS for name servers.</p>
+<p><img alt="" src="../images/cis-setup-nameservers.png" /></p>
+<p>You need to update the regisrar with the new name servers in the New NS records table above.  In the case where you used Softlayer to register your domain, here are the steps to follow.</p>
+<p>Go to Classic Infrastructure in IBM Cloud.  Expand the Services menu on the left and click on "Domain Registration".</p>
+<p><img alt="" src="../images/classic-infrastructure-menu.png" /></p>
+<p>On the page below, click the arrow to the left of your domain name to expand it.  Make sure the "Lock Domain" dropdown is set to "Unlocked" and click the  "Add / Edit DNS" link  for your domain.</p>
+<p><img alt="" src="../images/add-edit-dns-ns-records.png" /></p>
+<p>Replace the two existing name servers with the two from your CIS domain.  When you first click the link the screen will look like this:</p>
+<p><img alt="" src="../images/existing-ns-records.png" /></p>
+<p>When you replace these name servers with new ones it will look something like this:</p>
+<p><img alt="" src="../images/new-dns-records-from-cis.png" /></p>
+<p>Note:   Your name servers will be different, but they should match what you have on the CIS screen below.  If they do, click "Associate" on the screen above.</p>
+<p><img alt="" src="../images/domains-after-ns-association.png" /></p>
+<p>Go back to the CIS screen.  Click "Check Name Servers" to validate that your name servers were updated.  You might get a warning saying that the name servers were not updated.  This is okay; it takes a few minutes for the updates to propagate.  If that happens, refresh the page and try again in a few minutes.  You may also get an error saying that "you can only perform this action once per hour".  This is also okay.  If you refresh the page again you will eventually see that your domain has become active.</p>
+<p><img alt="" src="../images/cis-domain-is-active.png" /></p>
+<p>When that happens it means that now Cloud Internet Services is managing your domain! There is one more step that you should do at this point.  By default, the Web Application Firewall is not enabled for your domain.  To enable it, click on the <code>Web Application Firewall</code> link on the overview page and move the slider to the right.</p>
+<p><img alt="" src="../images/cis-enable-waf.png" /></p>
+<h2 id="adding-dns-records">Adding DNS records</h2>
+<p>To add a DNS record for your application you will create either an <code>A</code> or <code>CNAME</code> record.  An <code>A</code> record maps your application to a specific IP address, whereas a <code>CNAME</code> record creates a mapping from your domain to another hostname.  When you use a <code>CNAME</code> record you don't need to know the specific address, nor do you need to know if it ever changes.</p>
+<p>When you create an kubernetes cluster in the IBM Cloud Kubernetes Service (IKS), or an IBM Cloud Foundry Enterprise Environment (which is built on IKS), an <code>ingress subdomain</code> is created automatically for you and is managed by IKS.  When you create your own host name, say <code>myapp.eyebeemdemos.com</code>, and that application is running in Cloud Foundry Enterprise, you will need to create a <code>CNAME</code> record for it in Cloud Internet Services.</p>
+<p>To add a <code>CNAME</code> record for you application, go to the <code>Overview</code> page for your Cloud Internet Services instance.</p>
+<p><img alt="" src="../images/cis-domain-is-active.png" /></p>
+<p>Click on the link for <code>DNS Records</code>.  Scroll down to the <code>DNS Records</code> section.  Change the record type to <code>CNAME</code>, enter your app name in the <code>Name</code> field and the ingress subdomain for your Cloud Foundry Enterprise cluster in the <code>Alias Domain Name</code> field.</p>
+<p><img alt="" src="../images/add-cname-record.png" /></p>
+<p>Click the <code>Add Record</code> button.  You will see your new record show up in the list.  To enable the security features (ie. TLS) you need to enable the proxy by clicking on the slider.</p>
+<p><img alt="" src="../images/cname-record-added.png" /></p>
+<p>Now your <code>CNAME</code> record has been added, but it may still take a few minutes for it to be available, as the DNS record needs to be propagated out to all the other DNS servers.  When it is ready you will be able to ping it.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The address you see when you ping your hostname is actually an IP address for your Cloud Internet Services instance.  All traffic gets routed there first so that security features can be applied.  This also includes the TLS-enabled connection between Cloud Internet Services and your Cloud Foundry Enterprise cluster.</p>
+</div>
+<h2 id="ordering-origin-certificates">Ordering Origin Certificates</h2>
+<h2 id="ordering-edge-certificates">Ordering Edge Certificates</h2>
+<p>To properly encrypt traffic between your domain in CIS and the browser you need to have edge certificates.  Without them the browser will not trust your application because it did not present a certificate signed by a trusted authority.  Edge certificates are signed by a trusted authority.</p>
+<p>To order edge certificates for your domain in IBM Cloud Internet Services, go to the <code>Security -&gt; TLS</code> pane in the left nav, then click the button on the right to order a certificate.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can add multiple subdomains to the certificate when you order it.  This will allow you to use a single certificate for all of the subdomains you add to it.  You can always order another certificate if you add subdomains later, but you cannot add them to an existing certificate.</p>
+</div>
+<p><img alt="Ordering Edge Certificates" src="../images/cis-order-edge-cert.png" /></p>
+<p>Once you have completed the order you will see them listed:</p>
+<p><img alt="Edge certificates" src="../images/cis-edge-certificates.png" /></p>
+<p>You can view the details of the certificate by clicking the three dots to the right.  The details include a list of all of the subdomains covered by the certificate.</p>
+<p><img alt="Edge certificate details" src="../images/cis-edge-cert-details.png" /></p>
+<p>Here is what the TLS page should look like:</p>
+<p><img alt="TLS Overview" src="../images/cis-tls-overview.png" /></p>
+<h2 id="configuring-your-domain-in-cloud-foundry-enterprise">Configuring your domain in Cloud Foundry Enterprise</h2>
+<p>Setting up your custom domain for use in Cloud Foundry Enterprise is pretty simple.  You will want to order an origin certificate for your domain in Cloud Internet Services, as shown in the previous section.  This will allow you to use TLS for communication from Internet Services to your Cloud Foundry Enterprise cluster.  You will also need a DNS CNAME record for your application so that Internet Services will route traffic to your Cloud Foundry Enterprise cluster.</p>
+<p>The diagram below shows the basic configuration for using your custom domain.  The <code>Edge Services</code> box on the left is your Cloud Internet Services instance.  It contains the origin certificates you ordered above, and the DNS CNAME record that maps your hostname, <code>myapp.&lt;your-domain&gt;.com</code> to the ingress subdomain that was created by your Cloud Foundry Enterprise cluster.  The ingress subdomain is how all traffic gets routed to your cluster.  </p>
+<p><img alt="" src="../images/setup-custom-domain-cfee.png" /></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../create-domain/" title="Create a domain" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Create a domain
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../domain-with-openshift/" title="Configure domain for OpenShift" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Configure domain for OpenShift
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

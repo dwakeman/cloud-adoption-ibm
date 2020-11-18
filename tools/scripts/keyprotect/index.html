@@ -1,0 +1,1625 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Keyprotect - IBM Cloud Adoption</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="IBM Cloud Adoption" class="md-header-nav__button md-logo" aria-label="IBM Cloud Adoption">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            IBM Cloud Adoption
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Keyprotect
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/dwakeman/cloud-adoption-ibn" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IBM Cloud Adoption" class="md-nav__button md-logo" aria-label="IBM Cloud Adoption">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IBM Cloud Adoption
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/dwakeman/cloud-adoption-ibn" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Resilient Applications
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Resilient Applications" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Resilient Applications
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ha-app/ha-app/" title="HA app considerations" class="md-nav__link">
+      HA app considerations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ha-app/create-env/" title="Creating the Environment" class="md-nav__link">
+      Creating the Environment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ha-app/deploy-ha-app/" title="HA app deployment" class="md-nav__link">
+      HA app deployment
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Disaster Recovery
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Disaster Recovery" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Disaster Recovery
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../disaster-recovery/disaster-recovery/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Custom Domains
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Custom Domains" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Custom Domains
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../custom-domain/create-domain/" title="Create a domain" class="md-nav__link">
+      Create a domain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../custom-domain/manage-domain/" title="Manage your domain" class="md-nav__link">
+      Manage your domain
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../custom-domain/domain-with-openshift/" title="Configure domain for OpenShift" class="md-nav__link">
+      Configure domain for OpenShift
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Infrastructure
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Infrastructure" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Infrastructure
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../infrastructure/iac/" title="Infrastructure as Code (IaC)" class="md-nav__link">
+      Infrastructure as Code (IaC)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../infrastructure/schematics/" title="Schematics" class="md-nav__link">
+      Schematics
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../infrastructure/vpc/" title="Virtual Private Cloud" class="md-nav__link">
+      Virtual Private Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../infrastructure/sds/" title="Software Defined Storage" class="md-nav__link">
+      Software Defined Storage
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      IBM Cloud Platform
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="IBM Cloud Platform" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        IBM Cloud Platform
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cloud-platform/openshift-ibm-cloud/" title="OpenShift on IBM Cloud" class="md-nav__link">
+      OpenShift on IBM Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cloud-platform/ibm-cloud-operator/" title="IBM Cloud Operator" class="md-nav__link">
+      IBM Cloud Operator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cloud-platform/key-protect/" title="Key Protect" class="md-nav__link">
+      Key Protect
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Hybrid Cloud
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Hybrid Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Hybrid Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../hybrid-cloud/hybrid/" title="Deploying a Hybrid Cloud Application" class="md-nav__link">
+      Deploying a Hybrid Cloud Application
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Developer Experience
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Developer Experience" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Developer Experience
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dev-tools/dev-experience/" title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../dev-tools/crw/" title="CodeReady Workspaces" class="md-nav__link">
+      CodeReady Workspaces
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                  <h1>Keyprotect</h1>
+                
+                <pre><code class="sh">#!/bin/sh
+#set -x
+#-----------------------------------------------------------------------------------------------------
+# Script:  keyprotect
+# Version: v1.0.2
+#-----------------------------------------------------------------------------------------------------
+# IBM Key Protect - Utility functions
+#-----------------------------------------------------------------------------------------------------
+# Copyright (c) 2020, International Business Machines. All Rights Reserved.
+#-----------------------------------------------------------------------------------------------------
+
+
+display_usage()
+{
+    echo
+    echo &quot;NAME:&quot;
+    echo &quot;keyprotect.sh - Manage features of Key Protect&quot;
+    echo
+    echo &quot;USAGE:&quot;
+    echo &quot;keyprotect.sh &lt;key-protect-instance-name&gt; command [options]&quot;
+    echo
+    echo &quot;COMMANDS:&quot;
+    echo &quot;-------------------------------------------------------------------------------------------&quot;
+    echo
+    echo &quot;view-policies           List the current policies for the Key Protect Instance&quot;
+    echo &quot;enable-dual-auth        Enable the Dual Authorization policy for key deletes for all keys&quot;
+    echo &quot;disable-dual-auth       Disable the Dual Authorization policy for key deletes for all keys&quot;
+    echo &quot;disable-public-endpoint Disable the public endpoint for the Key Protect Instance&quot;
+    echo &quot;enable-public-endpoint  Enable the public endpoint for the Key Protect Instance&quot;
+    echo &quot;view-keys               List the keys in the Key Protect Instance in JSON format&quot;
+    echo &quot;view-keys-list          List the keys in the Key Protect Instance in list format&quot;
+    echo &quot;view-deleted-keys       List the deleted keys in the Key Protect Instance in JSON format&quot;
+    echo &quot;view-deleted-keys-list  List the deleted keys in the Key Protect Instance in list format&quot;
+    echo &quot;view-key                View the details of a key&quot;
+    echo &quot;view-key-material       View the material for a standard key&quot;
+    echo &quot;view-key-policies       View the current polices for the specified key&quot;
+    echo &quot;import-key              Import a standard or root key&quot;
+    echo &quot;restore-key             Restore an imported key that has been deleted&quot;
+    echo &quot;set-key-deletion        Set the specified key for deletion (first auth)&quot;
+    echo &quot;unset-key-deletion      Unset the specified key for deletion, which removes the first auth&quot;
+    echo &quot;help, h                 View help for this script&quot;
+    echo
+    echo
+    echo &quot;Note: For your convenience this command executes the ibmcloud cli to look up certain&quot;
+    echo &quot;      information needed to perform these tasks.  It requires you to be logged into&quot;
+    echo &quot;      the ibmcloud cli before you run this command.&quot;
+    echo
+    echo
+}
+
+view_policies()
+{
+    echo
+    echo &quot;Checking current policies for service ${service_name}...&quot;
+    echo
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/instance/policies&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'Content-Type: application/vnd.ibm.kms.policy+json' | jq --color-output
+}
+
+#-----------------------------------------------------------------------------------------------------
+# View policies for a key
+#
+# Arguments: key-id
+#    
+#-----------------------------------------------------------------------------------------------------
+view_key_policies()
+{
+
+    if [[ $# -lt 1 ]]; then
+        echo
+        echo &quot;for view-key-policies a key id is required&quot;
+        echo
+        echo &quot;USAGE:&quot;
+        echo &quot;keyprotect.sh &lt;key-protect-instance-name] view-key-policies [key-id]&quot;
+        echo
+        echo
+        exit 1
+    fi
+
+    keyId=$1
+
+    echo
+    echo &quot;Checking current policies for key ${keyId} in service ${service_name}...&quot;
+    echo
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys/${keyId}/policies&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'Content-Type: application/vnd.ibm.kms.policy+json' | jq --color-output
+}
+
+#-----------------------------------------------------------------------------------------------------
+# View keys in a Key Protect instance in JSON format
+#
+# Arguments: none
+#    
+#-----------------------------------------------------------------------------------------------------
+view_keys()
+{
+    echo
+    echo &quot;Listing keys for service ${service_name}...&quot;
+    echo
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.key+json' | jq --color-output
+
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+
+}
+
+#-----------------------------------------------------------------------------------------------------
+# View keys in a Key Protect instance in JSON format
+#
+# Arguments: none
+#    
+#-----------------------------------------------------------------------------------------------------
+view_deleted_keys()
+{
+    echo
+    echo &quot;Listing keys for service ${service_name}...&quot;
+    echo
+    echo &quot;Values for State field:&quot;
+    echo &quot;-------------------------&quot;
+    echo &quot;0  Pre-activation&quot;
+    echo &quot;1  Active&quot;
+    echo &quot;2  Suspended&quot;
+    echo &quot;3  Deactivated&quot;
+    echo &quot;5  Destroyed&quot;
+    echo
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys?state=5&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.key+json' | jq --color-output
+
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+
+}
+
+#-----------------------------------------------------------------------------------------------------
+# View a list of keys in a Key Protect instance
+#
+# Arguments: none
+#    
+#-----------------------------------------------------------------------------------------------------
+view_deleted_keys_list()
+{
+    echo
+    echo &quot;Listing deleted keys for service ${service_name}...&quot;
+    echo
+    echo &quot;Values for State column:&quot;
+    echo &quot;-------------------------&quot;
+    echo &quot;0  Pre-activation&quot;
+    echo &quot;1  Active&quot;
+    echo &quot;2  Suspended&quot;
+    echo &quot;3  Deactivated&quot;
+    echo &quot;5  Destroyed&quot;
+    echo
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys?state=5&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.key+json' | jq -r '[.resources | .[] 
+         | {    name: .name, id: .id, state: .state, crn: .crn} ] 
+         | [ .[] | with_entries( .key |= ascii_downcase ) ] | (.[0] 
+         | keys_unsorted | @tsv), (.[]|.| map(.) | @tsv) ' | column -t -s $'\t'
+
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+
+}
+
+
+#-----------------------------------------------------------------------------------------------------
+# View a list of keys in a Key Protect instance
+#
+# Arguments: none
+#    
+#-----------------------------------------------------------------------------------------------------
+view_keys_list()
+{
+    echo
+    echo &quot;Listing keys for service ${service_name}...&quot;
+    echo
+    echo &quot;Values for State column:&quot;
+    echo &quot;-------------------------&quot;
+    echo &quot;0  Pre-activation&quot;
+    echo &quot;1  Active&quot;
+    echo &quot;2  Suspended&quot;
+    echo &quot;3  Deactivated&quot;
+    echo &quot;5  Destroyed&quot;
+    echo
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.key+json' | jq -r '[.resources | .[] 
+         | {    name: .name, id: .id, state: .state, crn: .crn} ] 
+         | [ .[] | with_entries( .key |= ascii_downcase ) ] | (.[0] 
+         | keys_unsorted | @tsv), (.[]|.| map(.) | @tsv) ' | column -t -s $'\t'
+
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+
+}
+
+
+#-----------------------------------------------------------------------------------------------------
+# Import a key
+#
+# Arguments: key-type, key-name, key-payload
+#    
+#-----------------------------------------------------------------------------------------------------
+import_key()
+{
+
+    display_usage() {
+
+        echo
+        echo &quot;USAGE:&quot;
+        echo &quot;keyprotect.sh [service instance name] import-key [key-type] [key-name] [key-payload]&quot;
+        echo
+        echo &quot;Key Type&quot;
+        echo &quot;-------------------------------------------------------------------------------------------&quot;
+        echo &quot;standard     Creates a standard key.  Material from a standard key can be exported&quot;
+        echo &quot;root         Creates a root key.  material from a root key can never be exported&quot;
+        echo
+        echo &quot;Note: Key material must be base64 encoded.  For a root key, the base64 decoded value must be&quot;
+        echo &quot;      128, 192 or 256 bits.  This is 16 (128 bit), 24 (192 bit) or 32 (256 bit) Hex value&quot;
+        echo
+        echo &quot;      This command can create a 256 bit base64 encoded key for demo purposes:&quot;
+        echo
+        echo &quot;      openssl rand -base64 32&quot;
+        echo
+        exit 1     
+    }
+
+    if [[ $# -lt 3 ]]; then
+
+        # Key type is missing
+        if [[ $# -lt 1 ]]; then
+            echo
+            echo &quot;FAILED:  a key type is required&quot;
+
+            # there is a problem so display usage
+            display_usage
+        fi
+
+        # Key name is missing
+        if [[ $# -lt 2 ]]; then
+
+            echo
+            echo &quot;FAILED: a key name is required&quot;
+
+            # there is a problem so display usage
+            display_usage   
+        fi
+
+
+
+        # Key payload is missing
+        if [[ $# -lt 3 ]]; then
+            echo
+            echo &quot;FAILED: a key payload is required&quot;
+            # there is a problem so display usage
+            display_usage
+        fi
+
+        # there is a problem so display usage
+        display_usage
+    fi
+
+    # Get parameter values
+    keyType=&quot;$1&quot;
+    keyName=&quot;$2&quot;
+    keyPayload=&quot;$3&quot;
+
+    # Validate the key type
+    if [[ $keyType == &quot;standard&quot; || $keyType == &quot;root&quot; ]]; then
+        echo
+    else
+        echo
+        echo &quot;FAILED:  key type: $keyType is invalid&quot;
+        display_usage
+        exit 1
+    fi
+
+
+    # 
+    if [[ $keyType == &quot;root&quot; ]]; then
+        isExtractable=false
+    else
+        isExtractable=true
+    fi
+
+    echo &quot;The value of isExtractable is ${isExtractable}&quot;
+
+    echo
+    echo &quot;Importing key ...&quot;
+    echo
+
+    #set -x
+    curl -s -X POST &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'content-type: application/vnd.ibm.kms.key+json' \
+      -d '{
+            &quot;metadata&quot;: {
+                &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+                &quot;collectionTotal&quot;: 1
+            },
+            &quot;resources&quot;: [
+                {
+                    &quot;type&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+                    &quot;name&quot;: &quot;'&quot;$keyName&quot;'&quot;,
+                    &quot;extractable&quot;: '&quot;$isExtractable&quot;',
+                    &quot;payload&quot;: &quot;'&quot;$keyPayload&quot;'&quot;
+                }
+            ]
+          }' | jq --color-output
+
+    echo
+    echo &quot;Done.&quot;    
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+
+}
+
+
+#-----------------------------------------------------------------------------------------------------
+# Restore a key
+#
+# Arguments: key-id, key-payload
+#    
+#-----------------------------------------------------------------------------------------------------
+restore_key()
+{
+
+    display_usage() {
+
+        echo
+        echo &quot;USAGE:&quot;
+        echo &quot;keyprotect.sh [service instance name] restore-key [key-id] [key-payload]&quot;
+        echo
+        echo &quot;Note: The key-id can be found using the view-keys command.  You can only restore a key that&quot;
+        echo &quot;      previously existed.  Deleted keys have a State of Destroyed.  You must wait 30 seconds&quot;
+        echo &quot;      after deleting a key before it can be restored.&quot;
+        echo
+        exit 1   
+    }
+
+
+    if [[ $# -lt 2 ]]; then
+
+        # Key id is missing
+        if [[ $# -lt 1 ]]; then
+            echo
+            echo &quot;FAILED:  a key id is required&quot;
+
+            # there is a problem so display usage
+            display_usage
+        fi
+
+        # Key payload is missing
+        if [[ $# -lt 2 ]]; then
+            echo
+            echo &quot;FAILED: a key payload is required&quot;
+            # there is a problem so display usage
+            display_usage
+        fi
+
+        # there is a problem so display usage
+        display_usage
+    fi
+
+    # Get parameter values
+    keyId=&quot;$1&quot;
+    keyPayload=&quot;$2&quot;
+
+    echo
+    echo &quot;Restoring key ...&quot;
+    echo
+
+    set -x
+    curl -s -X POST &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys/${keyId}?action=restore&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -d '{
+            &quot;metadata&quot;: {
+                &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+                &quot;collectionTotal&quot;: 1
+            },
+            &quot;resources&quot;: [
+                {
+                    &quot;payload&quot;: &quot;'&quot;$keyPayload&quot;'&quot;
+                }
+            ]
+          }' | jq --color-output
+
+    echo
+    echo &quot;Done.&quot;    
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+
+}
+
+#-----------------------------------------------------------------------------------------------------
+# Enable Dual Authorization for a Key Protect Instance
+#
+# Arguments: none
+#    
+#-----------------------------------------------------------------------------------------------------
+enable_dual_auth()
+{
+
+    echo
+    echo &quot;Enabling Dual Authorization for service ${service_name}...&quot;
+    echo
+
+    curl -s -X PUT &quot;https://${region}.kms.cloud.ibm.com/api/v2/instance/policies&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'Content-Type: application/vnd.ibm.kms.policy+json' \
+      -d '{
+            &quot;metadata&quot;: {
+                &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+                &quot;collectionTotal&quot;: 1
+            },
+            &quot;resources&quot;: [
+                {
+                    &quot;policy_type&quot;: &quot;dualAuthDelete&quot;,
+                    &quot;policy_data&quot;: {
+                        &quot;enabled&quot;: true
+                    }
+                }
+            ]
+          }'
+
+    echo
+    echo &quot;Done.&quot;
+
+    view_policies
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+}
+
+#-----------------------------------------------------------------------------------------------------
+# disable Dual Authorization for a Key Protect Instance
+#
+# Arguments: none
+#    
+#-----------------------------------------------------------------------------------------------------
+disable_dual_auth()
+{
+
+    echo
+    echo &quot;disabling Dual Authorization for service ${service_name}...&quot;
+    echo
+
+    curl -s -X PUT &quot;https://${region}.kms.cloud.ibm.com/api/v2/instance/policies&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'Content-Type: application/vnd.ibm.kms.policy+json' \
+      -d '{
+            &quot;metadata&quot;: {
+                &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+                &quot;collectionTotal&quot;: 1
+            },
+            &quot;resources&quot;: [
+                {
+                    &quot;policy_type&quot;: &quot;dualAuthDelete&quot;,
+                    &quot;policy_data&quot;: {
+                        &quot;enabled&quot;: false
+                    }
+                }
+            ]
+          }'
+
+    echo
+    echo &quot;Done.&quot;
+
+    view_policies
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+}
+
+#-----------------------------------------------------------------------------------------------------
+# Set Allowed Networks policy for a Key Protect Instance
+#
+# Arguments: none
+#    
+#-----------------------------------------------------------------------------------------------------
+disable_public_endpoint()
+{
+
+    echo
+    echo &quot;Disabling public endpoint for service ${service_name}...&quot;
+    echo
+
+    curl -s -X PUT &quot;https://${region}.kms.cloud.ibm.com/api/v2/instance/policies&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'Content-Type: application/vnd.ibm.kms.policy+json' \
+      -d '{
+            &quot;metadata&quot;: {
+                &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+                &quot;collectionTotal&quot;: 1
+            },
+            &quot;resources&quot;: [
+                {
+                    &quot;policy_type&quot;: &quot;allowedNetwork&quot;,
+                    &quot;policy_data&quot;: {
+                        &quot;enabled&quot;: true,
+                        &quot;attributes&quot;: {
+                            &quot;allowed_network&quot;: &quot;private-only&quot;
+                        }
+                    }
+                }
+            ]
+          }'
+
+    echo
+    echo &quot;Done.&quot;
+
+    view_policies
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+}
+
+#-----------------------------------------------------------------------------------------------------
+# Set Allowed Networks policy for a Key Protect Instance
+#
+# Arguments: none
+#    
+#-----------------------------------------------------------------------------------------------------
+enable_public_endpoint()
+{
+
+    echo
+    echo &quot;enabling public endpoint for service ${service_name}...&quot;
+    echo
+
+    curl -s -X PUT &quot;https://${region}.kms.cloud.ibm.com/api/v2/instance/policies&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'Content-Type: application/vnd.ibm.kms.policy+json' \
+      -d '{
+            &quot;metadata&quot;: {
+                &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+                &quot;collectionTotal&quot;: 1
+            },
+            &quot;resources&quot;: [
+                {
+                    &quot;policy_type&quot;: &quot;allowedNetwork&quot;,
+                    &quot;policy_data&quot;: {
+                        &quot;enabled&quot;: true,
+                        &quot;attributes&quot;: {
+                            &quot;allowed_network&quot;: &quot;public-and-private&quot;
+                        }
+                    }
+                }
+            ]
+          }'
+
+    echo
+    echo &quot;Done.&quot;
+
+    view_policies
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+}
+
+#-----------------------------------------------------------------------------------------------------
+# View the details for a key
+#
+# Arguments: key-id
+#    
+#-----------------------------------------------------------------------------------------------------
+view_key()
+{
+
+    if [[ $# -lt 1 ]]; then
+        echo
+        echo &quot;for view-key a key id is required&quot;
+        echo
+        echo &quot;USAGE:&quot;
+        echo &quot;keyprotect.sh &lt;key-protect-instance-name] view-key [key-id]&quot;
+        echo
+        echo
+        exit 1
+    fi
+
+    keyId=$1
+
+    echo
+    echo &quot;viewing attributes for key ${keyId}...&quot;
+    echo
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys/${keyId}&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.policy+json' | jq --color-output
+
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+}
+
+#-----------------------------------------------------------------------------------------------------
+# View the material for a key  &lt;-- I think this is redundant with view_key
+#
+# Arguments: key-id
+#    
+#-----------------------------------------------------------------------------------------------------
+view_key_material()
+{
+
+    if [[ $# -lt 1 ]]; then
+        echo
+        echo &quot;for view-key-material a key id is required&quot;
+        echo
+        echo &quot;USAGE:&quot;
+        echo &quot;keyprotect.sh [service instance name] view-key-material [key-id]&quot;
+        echo
+        echo
+        exit 1
+    fi
+
+    keyId=$1
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys/${key_id}&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.policy+json' | jq -r ' .resources[] | .payload '
+
+
+    exit 0
+}
+
+#-----------------------------------------------------------------------------------------------------
+# Set a key for deletion - the first step in Dual Deletion 
+#
+# Arguments: key-id
+#    
+#-----------------------------------------------------------------------------------------------------
+set_key_deletion()
+{
+
+    if [[ $# -lt 1 ]]; then
+        echo
+        echo &quot;for set-key-deletion a key id is required&quot;
+        echo
+        echo &quot;USAGE:&quot;
+        echo &quot;keyprotect.sh [service instance name] set-key-deletion [key-id]&quot;
+        echo
+        echo
+        exit 1
+    fi
+
+    keyId=$1
+
+    echo
+    echo &quot;Setting key ${keyId} in service ${service_name} for deletion...&quot;
+    echo
+
+    curl -s -X POST &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys/${keyId}?action=setKeyForDeletion&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.key_action+json' \
+      -H 'content-type: application/vnd.ibm.kms.key_action+json' \
+      -d '{
+            &quot;metadata&quot;: {
+                &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+                &quot;collectionTotal&quot;: 1
+            },
+            &quot;resources&quot;: [
+                {
+                    &quot;policy_type&quot;: &quot;dualAuthDelete&quot;,
+                    &quot;policy_data&quot;: {
+                        &quot;enabled&quot;: true
+                    }
+                }
+            ]
+          }' | jq --color-output
+
+    echo
+    echo &quot;Done.&quot;    
+    echo
+    echo &quot;viewing policies for key ${keyId}...&quot;
+    echo
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys/${keyId}/policies&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.policy+json' | jq --color-output
+
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+}
+
+
+#-----------------------------------------------------------------------------------------------------
+# Unet a key for deletion - Use this function to &quot;undo&quot; a &quot;set key for deletion&quot; 
+#
+# Arguments: key-id
+#    
+#-----------------------------------------------------------------------------------------------------
+unset_key_deletion()
+{
+
+    if [[ $# -lt 1 ]]; then
+        echo
+        echo &quot;for set-key-deletion a key id is required&quot;
+        echo
+        echo &quot;USAGE:&quot;
+        echo &quot;keyprotect.sh [service instance name] set-key-deletion [key-id]&quot;
+        echo
+        echo
+        exit 1
+    fi
+
+    keyId=$1
+
+    echo
+    echo &quot;Unsetting key ${keyId} in service ${service_name} for deletion...&quot;
+    echo
+
+    curl -s -X POST &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys/${keyId}?action=unsetKeyForDeletion&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.key_action+json' \
+      -H 'content-type: application/vnd.ibm.kms.key_action+json' \
+      -d '{
+            &quot;metadata&quot;: {
+                &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+                &quot;collectionTotal&quot;: 1
+            },
+            &quot;resources&quot;: [
+                {
+                    &quot;policy_type&quot;: &quot;dualAuthDelete&quot;,
+                    &quot;policy_data&quot;: {
+                        &quot;enabled&quot;: true
+                    }
+                }
+            ]
+          }' | jq --color-output
+
+    echo
+    echo &quot;Done.&quot;    
+    echo
+    echo &quot;viewing policies for key ${keyId}...&quot;
+    echo
+
+    curl -s &quot;https://${region}.kms.cloud.ibm.com/api/v2/keys/${keyId}/policies&quot; \
+      -H 'Authorization: Bearer '&quot;$ibm_auth_token&quot;'' \
+      -H 'bluemix-instance: '&quot;$service_instance_guid&quot;'' \
+      -H 'accept: application/vnd.ibm.kms.policy+json' | jq --color-output
+
+    echo
+    echo &quot;Request complete.&quot;
+    exit 0
+}
+
+
+#-----------------------------------------------------------------------------------------------------
+# Main script execution starts here
+#-----------------------------------------------------------------------------------------------------
+
+service_name=&quot;$1&quot;
+kp_command=&quot;$2&quot;
+key_id=&quot;$3&quot;
+# Note: original way was to always have key-id as 3rd arg.  New way is to move command logic to functions and
+#       pass in argument 3 and higher in raw form directly to the function and let it decide what they mean.
+#       For now, key_id is still set to $3 so that logic outside of functions still works.
+
+# Always need to arguments:  service-instance-name and a command
+if [[ $# -lt 2  ]]; then
+    display_usage
+    exit 1
+fi
+
+# Only need to do these commands if a service name is present
+if [[ $# -ge 1 ]]; then
+
+    # Get the service instance details for $service_name
+    service_instance_details=$(ibmcloud resource service-instance $service_name --output JSON)
+
+
+
+    # Get the GUID for the specified Key Protect instance
+    service_instance_guid=$(echo $service_instance_details| jq -r '.[0].guid')
+#   service_instance_guid=$(ibmcloud resource service-instance $service_name --output JSON | jq -r '.[0].guid')
+
+    # Get the region for the Key Protect Instance
+#   region=$(echo $service_instance_details | jq -r '.[0].region_id')
+
+#   Note:  the line below sets the API endpoint to the private network.
+#   To use the public network comment the line below and uncomment the one above.
+    region=private.$(echo $service_instance_details | jq -r '.[0].region_id')
+
+
+    # Get the bearer token to use for authentication.
+    # Note:  This assumes that the user has previously logged into the IBM Cloud CLI
+    ibm_auth_token=$(ibmcloud iam oauth-tokens | awk '{ print $4}')
+fi
+
+
+#-----------------------------------------------------------------------------------------------------
+# View the policies for the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [ $kp_command == &quot;help&quot; ] || [ $kp_command == &quot;h&quot; ]; then
+    display_usage
+    exit 0
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# View the policies for the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;view-policies&quot; ]]; then
+    view_policies
+    exit 0
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# View the policies for a key in the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;view-key-policies&quot; ]]; then
+    view_key_policies $3
+fi
+
+
+#-----------------------------------------------------------------------------------------------------
+# View the keys for the specified Key Protect instance in JSON format
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;view-keys&quot; ]]; then
+    view_keys
+    exit 0
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# View the keys for the specified Key Protect instance in JSON format
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;view-deleted-keys&quot; ]]; then
+    view_deleted_keys
+    exit 0
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# View the deleted keys for the specified Key Protect instance in List format
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;view-deleted-keys-list&quot; ]]; then
+    view_deleted_keys_list
+    exit 0
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# View the keys for the specified Key Protect instance in List format
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;view-keys-list&quot; ]]; then
+    view_keys_list
+    exit 0
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# View the attributes for a key in the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;view-key&quot; ]]; then
+    view_key $3
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# Import a key into the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;import-key&quot; ]]; then
+    import_key $3 $4 $5
+    exit 0
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# Import a key into the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;restore-key&quot; ]]; then
+    restore_key $3 $4
+    exit 0
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# Enable dual authorization delete policy for the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;enable-dual-auth&quot; ]]; then
+    enable_dual_auth
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# Disable dual authorization delete policy for the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;disable-dual-auth&quot; ]]; then
+    disable_dual_auth
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# Disable public network for the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;disable-public-endpoint&quot; ]]; then
+    disable_public_endpoint
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# enable public network for the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;enable-public-endpoint&quot; ]]; then
+    enable_public_endpoint
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# View the attributes for a key in the specified Key Protect instance
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;view-key-material&quot; ]]; then
+    view_key_material $3
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# Set the specified key for deletion (first auth)
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;set-key-deletion&quot; ]]; then
+    set_key_deletion $3
+fi
+
+#-----------------------------------------------------------------------------------------------------
+# Unset the deletion (first auth) of the specified Key
+#-----------------------------------------------------------------------------------------------------
+if [[ $kp_command == &quot;unset-key-deletion&quot; ]]; then
+    unset_key_deletion $3
+fi
+
+#-----------------------------------------------------------------------------------------------------
+
+
+
+echo
+echo &quot;Error: Invalid command&quot;
+echo
+display_usage
+
+
+
+
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
