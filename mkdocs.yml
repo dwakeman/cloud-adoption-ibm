@@ -1,0 +1,32 @@
+site_name: IBM Cloud Adoption
+repo_url: https://github.com/dwakeman/cloud-adoption-ibn
+edit_uri: ''
+nav:
+  - Home: index.md
+  - Resilient Applications:
+    - HA app considerations: ha-app/ha-app.md
+    - Creating the Environment: ha-app/create-env.md
+    - HA app deployment: ha-app/deploy-ha-app.md
+  - Disaster Recovery: 
+    - Overview: disaster-recovery/disaster-recovery.md
+  - Custom Domains:
+        Create a domain: custom-domain/create-domain.md
+        Manage your domain: custom-domain/manage-domain.md
+        Configure domain for OpenShift: custom-domain/domain-with-openshift.md
+  - Infrastructure:
+    - Infrastructure as Code (IaC): infrastructure/iac.md
+    - Schematics: infrastructure/schematics.md
+    - Virtual Private Cloud: infrastructure/vpc.md
+    - Software Defined Storage: infrastructure/sds.md
+  - IBM Cloud Platform:
+    - OpenShift on IBM Cloud: cloud-platform/openshift-ibm-cloud.md
+    - IBM Cloud Operator: cloud-platform/ibm-cloud-operator.md
+    - Key Protect: cloud-platform/key-protect.md
+  - Hybrid Cloud:
+    - Deploying a Hybrid Cloud Application: hybrid-cloud/hybrid.md
+  - Developer Experience: 
+    - Overview: dev-tools/dev-experience.md
+    - CodeReady Workspaces: dev-tools/crw.md
+theme: material
+markdown_extensions:
+  - admonition
