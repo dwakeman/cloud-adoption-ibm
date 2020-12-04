@@ -1148,7 +1148,7 @@ echo "repos enabled"
 </ol>
 <p><strong>That's it for now.  Next it is time to create all of the prerequisite resources in AWS.</strong></p>
 <h2 id="alternative-path-creating-aws-resources-with-terraform">(Alternative Path) Creating AWS resources with terraform</h2>
-<p>If you know how to use terraform there is a folder in this repo that contains terraform scripts for creating all of the AWS resources, including the EC2 instances.  Before you run the terraform you need to create your location and generate/download the registration script.  </p>
+<p>If you know how to use terraform there is a folder in this repo that contains <a href="https://github.com/dwakeman/cloud-adoption-ibm/tree/main/docs/satellite/terraform/aws">terraform scripts</a> for creating all of the AWS resources, including the EC2 instances.  Before you run the terraform you need to create your location and generate/download the registration script.  </p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This terraform will create 3 EC2 instance for the control plane and 3 instances for use as worker nodes for an OpenShift cluster.  If you don't want to create the worker node hosts right away you can comment them out in <code>main.tf</code>.</p>
