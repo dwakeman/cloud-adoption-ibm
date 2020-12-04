@@ -22,6 +22,26 @@ nav:
     - OpenShift on IBM Cloud: cloud-platform/openshift-ibm-cloud.md
     - IBM Cloud Operator: cloud-platform/ibm-cloud-operator.md
     - Key Protect: cloud-platform/key-protect.md
+  - IBM Cloud Satellite:
+    - Overview: satellite/index.md
+    - Create a Satellite Location:
+      - IBM Cloud:
+        - Classic Infrastructure: 
+          - Prerequisites: satellite/ibm-cloud/classic/prerequisites.md
+          - Create Hosts: satellite/ibm-cloud/classic/create-hosts.md
+          - Create Location: satellite/ibm-cloud/classic/create-location.md
+          - Attach Hosts: satellite/ibm-cloud/classic/attach-hosts.md
+          - Assign Hosts to Location: satellite/ibm-cloud/classic/assign-hosts.md
+        - VPC:
+          - Prerequisites: satellite/ibm-cloud/vpc/prerequisites.md
+          - Create Location: satellite/ibm-cloud/vpc/create-location.md
+        - IBM Cloud for Government:
+          - Prerequisites: satellite/ibm-cloud/ic4g/prerequisites.md
+      - AWS:
+        - Create Location: satellite/aws/create-location.md
+        - Prerequisites: satellite/aws/prerequisites.md
+        - Create Hosts: satellite/aws/create-hosts.md
+        - Assign Hosts to Location: satellite/aws/assign-hosts.md
   - Hybrid Cloud:
     - Deploying a Hybrid Cloud Application: hybrid-cloud/hybrid.md
   - Developer Experience: 
