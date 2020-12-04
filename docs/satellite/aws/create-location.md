@@ -65,7 +65,7 @@ In order to attach hosts to your satellite location you have to run the script y
 
 ## (Alternative Path) Creating AWS resources with terraform
 
-If you know how to use terraform there is a folder in this repo that contains terraform scripts for creating all of the AWS resources, including the EC2 instances.  Before you run the terraform you need to create your location and generate/download the registration script.  
+If you know how to use terraform there is a folder in this repo that contains [terraform scripts](https://github.com/dwakeman/cloud-adoption-ibm/tree/main/docs/satellite/terraform/aws) for creating all of the AWS resources, including the EC2 instances.  Before you run the terraform you need to create your location and generate/download the registration script.  
 
 !!! note
     This terraform will create 3 EC2 instance for the control plane and 3 instances for use as worker nodes for an OpenShift cluster.  If you don't want to create the worker node hosts right away you can comment them out in `main.tf`.
