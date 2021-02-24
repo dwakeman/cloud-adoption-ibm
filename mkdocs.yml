@@ -42,6 +42,7 @@ nav:
         - Prerequisites: satellite/aws/prerequisites.md
         - Create Hosts: satellite/aws/create-hosts.md
         - Assign Hosts to Location: satellite/aws/assign-hosts.md
+    - Create an OpenShift Cluster: satellite/openshift/create-cluster.md
   - Hybrid Cloud:
     - Deploying a Hybrid Cloud Application: hybrid-cloud/hybrid.md
   - Developer Experience: 
