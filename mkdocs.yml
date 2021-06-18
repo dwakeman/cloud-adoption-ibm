@@ -1,6 +1,8 @@
 site_name: IBM Cloud Adoption
-repo_url: https://github.com/dwakeman/cloud-adoption-ibn
+repo_url: https://github.com/dwakeman/cloud-adoption-ibm
 edit_uri: ''
+docs_dir: docs
+site_dir: public
 nav:
   - Home: index.md
   - Resilient Applications:
@@ -33,10 +35,10 @@ nav:
           - Attach Hosts: satellite/ibm-cloud/classic/attach-hosts.md
           - Assign Hosts to Location: satellite/ibm-cloud/classic/assign-hosts.md
         - VPC:
-          - Prerequisites: satellite/ibm-cloud/vpc/prerequisites.md
+#          - Prerequisites: satellite/ibm-cloud/vpc/prerequisites.md
           - Create Location: satellite/ibm-cloud/vpc/create-location.md
-        - IBM Cloud for Government:
-          - Prerequisites: satellite/ibm-cloud/ic4g/prerequisites.md
+#        - IBM Cloud for Government:
+#          - Prerequisites: satellite/ibm-cloud/ic4g/prerequisites.md
       - AWS:
         - Create Location: satellite/aws/create-location.md
         - Prerequisites: satellite/aws/prerequisites.md
@@ -48,6 +50,26 @@ nav:
   - Developer Experience: 
     - Overview: dev-tools/dev-experience.md
     - CodeReady Workspaces: dev-tools/crw.md
-theme: material
+theme: 
+  name: material
+  palette:
+    scheme: default
+    primary: black
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+  custom_dir: overrides
+  use_directory_urls: true
 markdown_extensions:
   - admonition
+plugins:
+  - search:
+      lang: en
+copyright: Copyright © 2021 IBM Technology Garage
+extra_css:
+    - css/extra.css
+    - css/code.css
