@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#disaster-recovery" class="md-skip">
           Skip to content
         </a>
       
@@ -365,12 +365,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         Disaster Recovery
@@ -386,11 +388,159 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../disaster-recovery/disaster-recovery.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Overview
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="disaster-recovery.html" class="md-nav__link md-nav__link--active">
         Overview
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-architecture" class="md-nav__link">
+    Cloud Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-architecture" class="md-nav__link">
+    Network Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-application-architecture" class="md-nav__link">
+    Sample Application Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample Application Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-profiles" class="md-nav__link">
+    Application Profiles
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1" class="md-nav__link">
+    Tier 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Tier 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-compute" class="md-nav__link">
+    Tier 1 Compute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-application-cloudant" class="md-nav__link">
+    Tier 1 Application - Cloudant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-application-postgresql" class="md-nav__link">
+    Tier 1 Application - PostGreSQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-application-cloud-object-storage" class="md-nav__link">
+    Tier 1 Application - Cloud Object Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-2" class="md-nav__link">
+    Tier 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Tier 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-2-application-mongodb" class="md-nav__link">
+    Tier 2 Application - MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -617,14 +767,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       <label class="md-nav__link" for="__nav_7">
         IBM Cloud Satellite
@@ -640,21 +788,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../satellite/index.html" class="md-nav__link">
         Overview
       </a>
-      
     </li>
   
 
@@ -727,7 +865,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/prerequisites.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/prerequisites.html" class="md-nav__link">
         Prerequisites
       </a>
     </li>
@@ -739,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/create-hosts.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/create-hosts.html" class="md-nav__link">
         Create Hosts
       </a>
     </li>
@@ -751,7 +889,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/create-location.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/create-location.html" class="md-nav__link">
         Create Location
       </a>
     </li>
@@ -763,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/attach-hosts.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/attach-hosts.html" class="md-nav__link">
         Attach Hosts
       </a>
     </li>
@@ -775,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/assign-hosts.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/assign-hosts.html" class="md-nav__link">
         Assign Hosts to Location
       </a>
     </li>
@@ -814,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/vpc/create-location.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/vpc/create-location.html" class="md-nav__link">
         Create Location
       </a>
     </li>
@@ -859,7 +997,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aws/create-location.html" class="md-nav__link">
+      <a href="../satellite/aws/create-location.html" class="md-nav__link">
         Create Location
       </a>
     </li>
@@ -871,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aws/prerequisites.html" class="md-nav__link">
+      <a href="../satellite/aws/prerequisites.html" class="md-nav__link">
         Prerequisites
       </a>
     </li>
@@ -883,7 +1021,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aws/create-hosts.html" class="md-nav__link">
+      <a href="../satellite/aws/create-hosts.html" class="md-nav__link">
         Create Hosts
       </a>
     </li>
@@ -895,7 +1033,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aws/assign-hosts.html" class="md-nav__link">
+      <a href="../satellite/aws/assign-hosts.html" class="md-nav__link">
         Assign Hosts to Location
       </a>
     </li>
@@ -919,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="openshift/create-cluster.html" class="md-nav__link">
+      <a href="../satellite/openshift/create-cluster.html" class="md-nav__link">
         Create an OpenShift Cluster
       </a>
     </li>
@@ -1047,6 +1185,129 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-architecture" class="md-nav__link">
+    Cloud Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-architecture" class="md-nav__link">
+    Network Architecture
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-application-architecture" class="md-nav__link">
+    Sample Application Architecture
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample Application Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#application-profiles" class="md-nav__link">
+    Application Profiles
+  </a>
+  
+    <nav class="md-nav" aria-label="Application Profiles">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1" class="md-nav__link">
+    Tier 1
+  </a>
+  
+    <nav class="md-nav" aria-label="Tier 1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-compute" class="md-nav__link">
+    Tier 1 Compute
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-application-cloudant" class="md-nav__link">
+    Tier 1 Application - Cloudant
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-application-postgresql" class="md-nav__link">
+    Tier 1 Application - PostGreSQL
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-application-cloud-object-storage" class="md-nav__link">
+    Tier 1 Application - Cloud Object Storage
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-2" class="md-nav__link">
+    Tier 2
+  </a>
+  
+    <nav class="md-nav" aria-label="Tier 2">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-2-application-mongodb" class="md-nav__link">
+    Tier 2 Application - MongoDB
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1058,10 +1319,286 @@
               
                 
                 
-                <h1 id="overview">Overview</h1>
-<p>This site provides documentation and samples for working with IBM Cloud Satellite.  It includes step-by-step
-instructions for creating locations and sample terraform for creating the infrastructure needed for your
-hosts.</p>
+                <h1 id="disaster-recovery">Disaster Recovery</h1>
+<h2 id="overview">Overview</h2>
+<p>The approach to defining the disaster recover strategy needs to be systematic, and start with the "application", which is defined as a set of compute resources (IKS or OpenShift apps, VSIs, services, etc.) that make up a "business application".   While a holistic approach may be desired, the reality is that each business application is independent, with its own RTO/RPO requirements, which for many customers is expressed in the form of a set of service classes or tiers.</p>
+<table>
+<thead>
+<tr>
+<th align="center">Resiliency Tier</th>
+<th>Recovery Description</th>
+<th align="center">Recovery Time Objective</th>
+<th align="center">Recovery Point Objective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Tier 1</td>
+<td>Continuous Availabilty</td>
+<td align="center">&lt;= 1 Hour</td>
+<td align="center">&lt;= 1 Hour</td>
+</tr>
+<tr>
+<td align="center">Tier 2</td>
+<td>Advanced Recovery</td>
+<td align="center">&gt; 1 Hrs - &lt;= 24 Hrs</td>
+<td align="center">&lt;2 Hrs - &lt;24 Hrs</td>
+</tr>
+<tr>
+<td align="center">Tier 3</td>
+<td>Standard Recovery</td>
+<td align="center">&gt; 24 Hrs - &lt;= 72 Hrs</td>
+<td align="center">Last Backup</td>
+</tr>
+<tr>
+<td align="center">Tier 4</td>
+<td>No       Recovery</td>
+<td align="center">N/A</td>
+<td align="center">N/A</td>
+</tr>
+</tbody>
+</table>
+<p><em><strong>Note:</strong> The IBM Cloud platform itself must support the LOWEST number in the range.  Therefore, for the majority of their applications (Tier 1 and Tier 2), the IBM Cloud services (OpenShift, IKS, ICD, Cloudant, ICOS, Key Protect, Push Notifications, etc.) must have options/capabilities for support application recovery in 1 hour or less.  For databases that require backup/restore, in order to qualify for Tier 2 the backups need to be every two hours?  Sounds like the app owners can choose their RPO, so they could schedule their backups accordingly to fit both RTO and RPO they decide for themselves.</em></p>
+<p>Since each business application will have a unique set of compute, service and other resources, each one will need to be reviewed to make sure that the strategy and requirements for DR for that app are understood, documented and implemented (automation?) before going to production.  To build the framework that will drive that analysis and work we will profile three business applications with comment sets of resources to create the scaffolding that application teams can use for their own applications.</p>
+<p><strong>High Availability and Disaster Recovery</strong></p>
+<p>When dealing with improved resilience it important to make some distinctions between High Availability (HA) and Disaster Recovery (DR).</p>
+<p>HA is mainly about keeping the service available to the end users when "ordinary" activities are performed on the system like deploying updates, rebooting the hosting Virtual Machines, applying security patches to the hosting OS, etc. For our purposes, High Availability within a single site can be achieved by eliminating single points of failure. The Blue Compute sample application in its current form implements high availability.
+HA usually doesn't deal with major unplanned (or planned) issues such as complete site loss due to major power outages, earthquakes, severe hardware failures, full-site connectivity loss, etc. In such cases, if the service must meet strict Service Level Objectives (SLO), you should make the whole application stack (infrastructure, services and application components) redundant by deploying it in at least two different Bluemix regions. This is typically defined as a DR Architecture.</p>
+<p>There are many options to implement DR solutions. For the sake of simplicity, we can group the different options in three major categories:</p>
+<ul>
+<li><strong>Active/Passive -</strong> Active/Passive options are based on keeping the full application stack active in one location, while another application stack is deployed in a different location, but kept idle (or shut down). In the case of prolonged unavailability of the primary site, the application stack is activated in the backup site. Often that requires the restoring of backups taken in the primary site. This approach is not recommended when loosing data can be a problem (e.g. when the Recovery Point Objective (RPO) is less than a few hours ) or when the availability of the service is critical (e.g. when the Return to Operations (RTO) objective is less than a few hours).</li>
+<li><strong>Active/Standby -</strong> In the Active/Standby case the full application stack is active in both primary and backup location, however users transactions are served only by the primary site. The backup site takes care of keeping a replica of the status of the main location though data replication (such as DB replication or disk replication). In case of prolonged unavailability of the primary site, all client transactions are routed to the backup site. This approach provides quite good RPO and RTO (generally measured in minutes), however it is significantly more expensive than the Active/Passive options because of the double deployment (e.g., resources are wasted because the Stand by assets can't be used to improve scalability and throughput).</li>
+<li><strong>Active/Active -</strong> In the Active/Active case both locations are active and client transactions are distributed according to predefined policies (such as round-robin, geographical load balancing, etc. ) to both regions. In the case of failure of one site the other site must be able to serve all clients. It's possible to achieve both an RPO and RTO close to zero with this configuration. The drawback is that both regions must be sized to handle the full load, even if they are used at the half of their capabilities when both locations are available. In such cases the Bluemix Autoscaling service can help in keeping always resources allocated according to the needs (as happens with the BlueCompute sample application).</li>
+</ul>
+<p>*Source: <a href="https://github.com/ibm-cloud-architecture/refarch-cloudnative-resiliency#high-availability-and-disaster-recovery">Making Microservices Resilient</a></p>
+<h2 id="cloud-architecture">Cloud Architecture</h2>
+<h2 id="network-architecture">Network Architecture</h2>
+<h2 id="sample-application-architecture">Sample Application Architecture</h2>
+<p><img alt="Sample Application Architecture" src="images/sample-app-architecture.png" /></p>
+<h3 id="application-profiles">Application Profiles</h3>
+<p>One approach is to build a set of architecture profiles that represent the majority of apps.  These profiles would include options for various classes of service, compute requirements, and all the other stuff listed below.</p>
+<h4 id="tier-1">Tier 1</h4>
+<p>Tier 1 applications have a requirement that the platform be available in less than an hour in the event of a disaster where the primary MZR becomes unavailable.  To achieve this with CFEE it will be necessary to have a fully-configured instance of CFEE up and running in hot standby mode in the backup MZR.  This includes:</p>
+<p><strong>Platform:</strong></p>
+<ul>
+<li>VPC with subnets that use non-overlapping CIDR blocks and on-premise connectivity configured</li>
+<li>CFEE provisioned in the VPC</li>
+<li>Org, spaces, custom domains and other custom configurations needed</li>
+<li>All applications deployed with the same version as deployed in primary MZR</li>
+</ul>
+<p><strong>Application:</strong></p>
+<ul>
+<li>All applications deployed with the same version as deployed in primary MZR</li>
+<li>
+<p>Dependent services provisioned and necessary data replication strategy in place (bi-directional, read only replica, etc.)</p>
+<p><em><strong>Note:</strong> Databases that use backup/restore as their only cross region replication option will not support Tier 1 availability unless the backups occur hourly and a restore can be completed in less than an hour.</em></p>
+</li>
+<li>
+<p>Service credentials and service bindings</p>
+</li>
+</ul>
+<h5 id="tier-1-compute">Tier 1 Compute</h5>
+<p><img alt="Tier 1 Compute" src="images/tier-1-compute.png" /></p>
+<p>In order to meet Tier 1 RTO/RPO these components will need to be preconfigured and at their production workload capacity in US East.  </p>
+<p>The size of the CF Enterprise or IKS clusters in US East may only need to be large enough to support Tier 1 and 2 workloads.  All applications can always be deployed there (as they are today in Dedicated) but for Tier 3 and 4 applications they could be stopped.  The idea would be to allow for Tier 1 and 2 apps to immediately become available with enough capacity to run them should a failure occur, but to save money the cluster would only be scaled up to match the primary cluster (and support the Tier 3/4 workloads) when actually needed, as Tier 3/4 apps have longer RTO in which the scaling operation would complete.</p>
+<p>The same technique could be applied to updates to the CF Enterprise or IKS clusters.  The first step would be to scale up the backup cluster to full capacity (matching the primary cluster) before starting the upgrade.  Then do some sort of blue/green update where workload could be switched to the backup while the primary cluster is upgraded.  Once the primary cluster is upgraded and verified, workload would be switched back, the backup cluster could be scaled back down and then upgraded.</p>
+<p><strong>Gaps/Unknowns</strong></p>
+<ol>
+<li>Where will traffic routing be managed/changed in order to redirect from primary to backup site?  Where is it done today?</li>
+<li>For databases, do we have any issues or constraints with scaling in terms of timing?  For example, for Cloudant Enterprise, will there always be enough capacity in the backup MZR such that all databases in the instance in the primary MZR are able to be replicated or restored?  If not this could be an impact on RTO for apps that use Cloudant.</li>
+</ol>
+<h5 id="tier-1-application-cloudant">Tier 1 Application - Cloudant</h5>
+<p><img alt="Tier 1 Application - Cloudant" src="images/tier-1-app-cloudant.png" /></p>
+<p>In this scenario the data will be replicated automatically by Cloudant.  In the event of a disaster the only change needed will be to reconfigure DNS to point to the cluster in US East.</p>
+<p><strong>Benefits</strong>
+- Fastest recovery time, dependent only on the time it takes to verify that the data was replicated and make the DNS switch </p>
+<p><strong>Impacts</strong>
+- Cost.  To support the recovery time objective the only viable option is the active/hot standby model.
+- Development teams need to update their deployment pipelines to also deploy their apps to the standby CFEE cluster every time they deploy to production.  And validate that it was successful.</p>
+<h5 id="tier-1-application-postgresql">Tier 1 Application - PostGreSQL</h5>
+<p><img alt="Tier 1 Application - PostGreSQL" src="images/tier-1-app-postgress.png" /></p>
+<p>In this scenario the data will be replicated automatically by IBM Cloud Databases to a read-only replica in the backup MZR.  In the event of a disaster the application team will need to manually trigger a promotion of the read-only replica to become the leader.  This action will take some time; as a read-only replica the service instance is NOT configured using an HA topology . When the promotion occurs several steps happen to elevate the instance to an HA configuration.</p>
+<p>The only other change needed will be to reconfigure DNS to point to the cluster in US East, once the database promotion is complete.</p>
+<p><strong>Benefits</strong>
+- Faster recovery time, as the data is already replicated to the backup MZR.  There is still some latency related to the time it takes to reconfigure the database to an HA configuration.
+<strong>Impacts</strong>
+- Cost.  To support the recovery time objective the only viable option is the active/hot standby model.
+- Development teams need to update their deployment pipelines to also deploy their apps to the standby CFEE cluster every time they deploy to production.  And validate that it was successful.
+- Manual intervention is required to trigger and monitor the promotion of the read-only replica to leader status.</p>
+<p><a href="https://cloud.ibm.com/docs/databases-for-postgresql?topic=databases-for-postgresql-read-only-replicas">Configuring read-only replicas</a></p>
+<p><strong>Basic Steps:</strong></p>
+<ul>
+<li>create instance in primary MZR (i.e. Dallas)</li>
+<li>create read-only replica in DR MZR (i.e. Washington, DC)<ul>
+<li>Read-only replica is a single zone instance</li>
+</ul>
+</li>
+<li>If primary MZR is unavailable, promote read-only replica to leader.  Now DR MZR becomes the leader<ul>
+<li>updates the config in the DR MZR to be MZR resilient, meaning additional nodes are added</li>
+<li>takes a full backup of the database in the DR MZR</li>
+<li>DR MZR becomes the leader and ties to original leader in primary MZR are broken<ul>
+<li>original instance in Primary MZR can be deleted.  This deletes all backups in the primary MZR.</li>
+<li>if original instance is not deleted (i.e. backups are still available) a new instance can be created by restoring from a backup, should that become necessary.</li>
+<li>the backups taken in the original MZR are still accessible even if that MZR is completely unavailable; they are stored in cross-regional ICOS buckets.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>If a read-only replica is promoted to leader, the original leader is no longer viable.  </li>
+<li>To move the data/workload back to the original MZR, create a read-replica in the original MZR and promote it to be the leader.  This does create a new instance of the database, not a restore of the original instance.</li>
+</ul>
+<h5 id="tier-1-application-cloud-object-storage">Tier 1 Application - Cloud Object Storage</h5>
+<p><img alt="Tier 1 Application - Cloud Object Storage" src="images/tier-1-app-cos.png" /></p>
+<p>In this scenario the data is always available in both MZRs via cross-regional buckets.  Therefore, the only change needed is to update the DNS routing to point to the backup MZR.</p>
+<h4 id="tier-2">Tier 2</h4>
+<p>Tier 2 applications have a requirement that the platform be available in less than an hour in the event of a disaster where the primary MZR becomes unavailable.  To achieve this with CFEE it will be necessary to have a fully-configured instance of CFEE up and running in hot standby mode in the backup MZR.  This includes:</p>
+<p><strong>Platform:</strong>
+- VPC with subnets that use non-overlapping CIDR blocks and on-premise connectivity configured
+- CFEE provisioned in the VPC
+- Org, spaces, custom domains and other custom configurations needed
+- All applications deployed with the same version as deployed in primary MZR</p>
+<p><strong>Application:</strong>
+- All applications deployed with the same version as deployed in primary MZR
+- Dependent services provisioned and necessary data replication strategy in place (bi-directional, read only replica, backup/restore, etc.)
+- Service credentials and service bindings</p>
+<h5 id="tier-2-application-mongodb">Tier 2 Application - MongoDB</h5>
+<p><img alt="Tier 2 Application - MongoDB" src="images/tier-2-app-mongodb.png" /></p>
+<p>In this scenario, the data is not replicated to the backup MZR.  When a disaster is declared the application team will need to create a new database instance in the backup MZR by restoring the data from backup.  </p>
+<p><em><strong>Note:</strong> The backup from the database instance in the Primary MZR is available in the backup MZR even if the primary MZR is completely unavailable.</em></p>
+<p>Once the data is restored, the only other change needed is to change the DNS routing to point to the backup MZR.</p>
+<p><strong>Backup and restore procedures</strong></p>
+<ul>
+<li><a href="https://cloud.ibm.com/docs/services/databases-for-elasticsearch?topic=cloud-databases-dashboard-backups">ElasticSearch</a></li>
+<li><a href="https://cloud.ibm.com/docs/services/databases-for-postgresql?topic=cloud-databases-dashboard-backups">MongoDB</a></li>
+<li><a href="https://cloud.ibm.com/docs/services/databases-for-redis?topic=cloud-databases-dashboard-backups#backups-and-restoration">Redis</a></li>
+</ul>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications#kubernetes">IBM Kubernetes Service Multi-Region Architecture</a></li>
+<li><a href="https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications#strategies-for-resilient-applications">Strategies for Resilient Applications</a></li>
+<li><a href="https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-multi-region-webapp#secure-web-application-across-multiple-regions">Secure web applications across multiple regions</a></li>
+<li><a href="https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-multi-region-k8s-cis#resilient-and-secure-multi-region-kubernetes-clusters-with-cloud-internet-services">Resilient and secure multi-region Kubernetes clusters with IBM Cloud Internet Services</a></li>
+</ul>
+<h1 id="ibm-cloud-services-resilience">ibm-cloud-services-resilience</h1>
+<p>This repository provides links to the HA / DR / Backup information for the IBM Cloud Services in Scope.</p>
+<table>
+<thead>
+<tr>
+<th>Services</th>
+<th>DR Capabilities</th>
+<th>DR Ownership/Control</th>
+<th>Documentation</th>
+<th>RTO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Console</td>
+<td>Core service available in multiple regions</td>
+<td>IBM</td>
+<td>N/A</td>
+<td>HA</td>
+</tr>
+<tr>
+<td>IAM</td>
+<td>Core Service available in multiple regions</td>
+<td>IBM</td>
+<td>N/A</td>
+<td>HA</td>
+</tr>
+<tr>
+<td>CFEE</td>
+<td>Service available in multiple regions</td>
+<td>Client</td>
+<td>Tgt. end of November</td>
+<td>based on Client DR Implementation</td>
+</tr>
+<tr>
+<td>Cloudant</td>
+<td>Service available in multiple regions</td>
+<td>Client</td>
+<td><a href="https://cloud.ibm.com/docs/services/Cloudant/guides?topic=cloudant-disaster-recovery-and-backup">Disaster recovery and backup</a></td>
+<td>based on Client DR Implementation</td>
+</tr>
+<tr>
+<td>IBM Cloud DB Elastic Search</td>
+<td>Service available in multiple regions</td>
+<td>Client</td>
+<td><a href="https://cloud.ibm.com/docs/services/databases-for-elasticsearch?topic=cloud-databases-dashboard-backups">Managing Backups</a></td>
+<td>based on on Client DR Implementation</td>
+</tr>
+<tr>
+<td>IBM Cloud DB Mongo DB</td>
+<td>Service available in multiple regions</td>
+<td>Client</td>
+<td><a href="https://cloud.ibm.com/docs/services/databases-for-mongodb?topic=cloud-databases-dashboard-backups">Managing Backups</a></td>
+<td></td>
+</tr>
+<tr>
+<td>IBM Cloud DB Postgres</td>
+<td>Service available in multiple regions</td>
+<td>Client</td>
+<td><a href="https://cloud.ibm.com/docs/services/databases-for-postgresql?topic=cloud-databases-dashboard-backups">Managing Backups</a></td>
+<td>based on Client DR Implementation</td>
+</tr>
+<tr>
+<td>IBM Cloud Object Storage</td>
+<td>Service available in multiple regions</td>
+<td>Client</td>
+<td><a href="https://cloud.ibm.com/docs/services/cloud-object-storage/basics?topic=cloud-object-storage-about-ibm-cloud-object-storage">About IBM Cloud Object Storage</a></td>
+<td>depends on Client DR Implementation</td>
+</tr>
+<tr>
+<td>IKS</td>
+<td>Service available in multiple regions</td>
+<td>Client</td>
+<td><a href="https://cloud.ibm.com/docs/containers?topic=containers-ha#ha">High availability for IBM Cloud Kubernetes Service</a> <a href="https://cloud.ibm.com/docs/containers?topic=containers-ha_clusters#ha_clusters">Planning your cluster for high availability</a></td>
+<td>based on Client DR Implementation</td>
+</tr>
+<tr>
+<td>Key Protect</td>
+<td>Regional: IBM is responsible for bringing the service back in a different Region</td>
+<td>IBM</td>
+<td>N/A</td>
+<td>the current documented RTO is &lt;1 day</td>
+</tr>
+<tr>
+<td>Message Hub/Event streams</td>
+<td>Service available in multiple regions</td>
+<td>Client</td>
+<td><a href="https://cloud.ibm.com/docs/services/EventStreams?topic=eventstreams-faqs#disaster_recovery">FAQs</a></td>
+<td>based on Client DR Implementation</td>
+</tr>
+<tr>
+<td>Push Notification</td>
+<td>Regional</td>
+<td>IBM</td>
+<td>TBD</td>
+<td>the current documented RTO is 1-3 days</td>
+</tr>
+<tr>
+<td>Virtual Private Cloud</td>
+<td>Service available in multiple regions</td>
+<td>Client</td>
+<td><a href="https://cloud.ibm.com/apidocs/vpc-on-classic">Introduction</a></td>
+<td>based on Client DR Implementation</td>
+</tr>
+<tr>
+<td>Watson Natural Language Understanding (NLU)</td>
+<td>Client is responsible for restoring the service back in a different Region</td>
+<td>Client</td>
+<td><a href="https://cloud.ibm.com/docs/services/natural-language-understanding?topic=natural-language-understanding-ha-dr">High availability and disaster recovery</a></td>
+<td>based on Client DR Implementation</td>
+</tr>
+</tbody>
+</table>
+<p>Other documentation:</p>
+<ul>
+<li><a href="https://www.ibm.com/cloud/garage/architectures/resilience/allresiliencesolutions">Build resilient applications on the cloud</a></li>
+<li><a href="https://www.ibm.com/cloud/garage/architectures/hybridIntegration/hybrid_dr_microservices">Hybrid integration for solutions that span environments</a></li>
+<li><a href="https://www.ibm.com/cloud/garage/architectures/hybridIntegration/hybrid_connectivity">Hybrid integration for solutions that span environments</a></li>
+<li><a href="https://cloud.ibm.com/docs/tutorials?topic=solution-tutorials-strategies-for-resilient-applications#strategies-for-resilient-applications">Strategies for resilient applications</a></li>
+</ul>
                 
               
               

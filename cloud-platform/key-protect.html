@@ -1,0 +1,2072 @@
+<!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.8">
+    
+    
+      
+        <title>Key Protect - IBM Cloud Adoption</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#000000">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700%7CIBM+Plex+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"IBM Plex Sans";--md-code-font-family:"IBM Plex Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+      <link rel="stylesheet" href="../css/code.css">
+    
+    
+      
+
+
+    
+    
+
+  <!-- Determine title -->
+  
+  
+    
+  
+
+  <!-- The image needs to have an absolute URL -->
+  
+
+  <!-- Open graph meta tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="IBM Cloud Adoption - Key Protect" />
+  <meta property="og:description" content="None" />
+  <meta property="og:url" content="None" />
+  <meta property="og:image" content="assets/images/banner.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="568" />
+
+
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#key-protect" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="IBM Cloud Adoption" class="md-header__button md-logo" aria-label="IBM Cloud Adoption" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IBM Cloud Adoption
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Key Protect
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/dwakeman/cloud-adoption-ibm" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Determine class according to configuration -->
+
+
+
+
+<!-- Main navigation -->
+<nav
+  class="md-nav md-nav--primary"
+  aria-label="Navigation"
+  data-md-level="0"
+>
+
+  <!-- Site title -->
+  <!--
+  <label class="md-nav__title" for="__drawer">
+    <a
+      href="../index.html"
+      title="IBM Cloud Adoption"
+      class="md-nav__button md-logo"
+      aria-label="IBM Cloud Adoption"
+      data-md-component="logo"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    IBM Cloud Adoption
+  </label>
+-->
+
+  <!-- Repository information -->
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/dwakeman/cloud-adoption-ibm" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+
+  <!-- Render item list -->
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Resilient Applications
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Resilient Applications" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Resilient Applications
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ha-app/ha-app.html" class="md-nav__link">
+        HA app considerations
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ha-app/create-env.html" class="md-nav__link">
+        Creating the Environment
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ha-app/deploy-ha-app.html" class="md-nav__link">
+        HA app deployment
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Disaster Recovery
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Disaster Recovery" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Disaster Recovery
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../disaster-recovery/disaster-recovery.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Custom Domains
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Custom Domains" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Custom Domains
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-domain/create-domain.html" class="md-nav__link">
+        Create a domain
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-domain/manage-domain.html" class="md-nav__link">
+        Manage your domain
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../custom-domain/domain-with-openshift.html" class="md-nav__link">
+        Configure domain for OpenShift
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Infrastructure
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Infrastructure" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Infrastructure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/iac.html" class="md-nav__link">
+        Infrastructure as Code (IaC)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/schematics.html" class="md-nav__link">
+        Schematics
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/vpc.html" class="md-nav__link">
+        Virtual Private Cloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/sds.html" class="md-nav__link">
+        Software Defined Storage
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      <label class="md-nav__link" for="__nav_6">
+        IBM Cloud Platform
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="IBM Cloud Platform" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          IBM Cloud Platform
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="openshift-ibm-cloud.html" class="md-nav__link">
+        OpenShift on IBM Cloud
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ibm-cloud-operator.html" class="md-nav__link">
+        IBM Cloud Operator
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Key Protect
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="key-protect.html" class="md-nav__link md-nav__link--active">
+        Key Protect
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#restricting-access-to-keys" class="md-nav__link">
+    Restricting access to keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dual-authorization-delete" class="md-nav__link">
+    Dual Authorization Delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-script" class="md-nav__link">
+    Using the script
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-policies-for-a-key-protect-instance" class="md-nav__link">
+    Viewing policies for a Key Protect Instance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-the-dual-authorization-policy-for-a-key-protect-instance" class="md-nav__link">
+    Enabling the Dual Authorization policy for a Key Protect Instance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-keys-in-json-format" class="md-nav__link">
+    View Keys in JSON format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-keys-in-list-format" class="md-nav__link">
+    View Keys in list format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-deleted-keys-in-json-format" class="md-nav__link">
+    View Deleted Keys in JSON Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-deleted-keys-in-list-format" class="md-nav__link">
+    View Deleted Keys in List Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-key-policies" class="md-nav__link">
+    View Key Policies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-key-for-deletion" class="md-nav__link">
+    Set Key for Deletion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unset-key-for-deletion" class="md-nav__link">
+    Unset key for deletion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-a-key-from-the-ui" class="md-nav__link">
+    Deleting a Key from the UI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-usage-of-keys" class="md-nav__link">
+    Viewing usage of keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypto-erasure" class="md-nav__link">
+    Crypto Erasure
+  </a>
+  
+    <nav class="md-nav" aria-label="Crypto Erasure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-steps" class="md-nav__link">
+    Validation Steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      <label class="md-nav__link" for="__nav_7">
+        IBM Cloud Satellite
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="IBM Cloud Satellite" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          IBM Cloud Satellite
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/index.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2" type="checkbox" id="__nav_7_2" >
+      
+      <label class="md-nav__link" for="__nav_7_2">
+        Create a Satellite Location
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Create a Satellite Location" data-md-level="2">
+        <label class="md-nav__title" for="__nav_7_2">
+          <span class="md-nav__icon md-icon"></span>
+          Create a Satellite Location
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2_1" type="checkbox" id="__nav_7_2_1" >
+      
+      <label class="md-nav__link" for="__nav_7_2_1">
+        IBM Cloud
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="IBM Cloud" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          IBM Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2_1_1" type="checkbox" id="__nav_7_2_1_1" >
+      
+      <label class="md-nav__link" for="__nav_7_2_1_1">
+        Classic Infrastructure
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Classic Infrastructure" data-md-level="4">
+        <label class="md-nav__title" for="__nav_7_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Classic Infrastructure
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/ibm-cloud/classic/prerequisites.html" class="md-nav__link">
+        Prerequisites
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/ibm-cloud/classic/create-hosts.html" class="md-nav__link">
+        Create Hosts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/ibm-cloud/classic/create-location.html" class="md-nav__link">
+        Create Location
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/ibm-cloud/classic/attach-hosts.html" class="md-nav__link">
+        Attach Hosts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/ibm-cloud/classic/assign-hosts.html" class="md-nav__link">
+        Assign Hosts to Location
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2_1_2" type="checkbox" id="__nav_7_2_1_2" >
+      
+      <label class="md-nav__link" for="__nav_7_2_1_2">
+        VPC
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="VPC" data-md-level="4">
+        <label class="md-nav__title" for="__nav_7_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          VPC
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/ibm-cloud/vpc/create-location.html" class="md-nav__link">
+        Create Location
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7_2_2" type="checkbox" id="__nav_7_2_2" >
+      
+      <label class="md-nav__link" for="__nav_7_2_2">
+        AWS
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="AWS" data-md-level="3">
+        <label class="md-nav__title" for="__nav_7_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          AWS
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/aws/create-location.html" class="md-nav__link">
+        Create Location
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/aws/prerequisites.html" class="md-nav__link">
+        Prerequisites
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/aws/create-hosts.html" class="md-nav__link">
+        Create Hosts
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/aws/assign-hosts.html" class="md-nav__link">
+        Assign Hosts to Location
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satellite/openshift/create-cluster.html" class="md-nav__link">
+        Create an OpenShift Cluster
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_8" type="checkbox" id="__nav_8" >
+      
+      <label class="md-nav__link" for="__nav_8">
+        Hybrid Cloud
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Hybrid Cloud" data-md-level="1">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Hybrid Cloud
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hybrid-cloud/hybrid.html" class="md-nav__link">
+        Deploying a Hybrid Cloud Application
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_9" type="checkbox" id="__nav_9" >
+      
+      <label class="md-nav__link" for="__nav_9">
+        Developer Experience
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Developer Experience" data-md-level="1">
+        <label class="md-nav__title" for="__nav_9">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Experience
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev-tools/dev-experience.html" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dev-tools/crw.html" class="md-nav__link">
+        CodeReady Workspaces
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#restricting-access-to-keys" class="md-nav__link">
+    Restricting access to keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dual-authorization-delete" class="md-nav__link">
+    Dual Authorization Delete
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-the-script" class="md-nav__link">
+    Using the script
+  </a>
+  
+    <nav class="md-nav" aria-label="Using the script">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#viewing-policies-for-a-key-protect-instance" class="md-nav__link">
+    Viewing policies for a Key Protect Instance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-the-dual-authorization-policy-for-a-key-protect-instance" class="md-nav__link">
+    Enabling the Dual Authorization policy for a Key Protect Instance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-keys-in-json-format" class="md-nav__link">
+    View Keys in JSON format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-keys-in-list-format" class="md-nav__link">
+    View Keys in list format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-deleted-keys-in-json-format" class="md-nav__link">
+    View Deleted Keys in JSON Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-deleted-keys-in-list-format" class="md-nav__link">
+    View Deleted Keys in List Format
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#view-key-policies" class="md-nav__link">
+    View Key Policies
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-key-for-deletion" class="md-nav__link">
+    Set Key for Deletion
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unset-key-for-deletion" class="md-nav__link">
+    Unset key for deletion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-a-key-from-the-ui" class="md-nav__link">
+    Deleting a Key from the UI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#viewing-usage-of-keys" class="md-nav__link">
+    Viewing usage of keys
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#crypto-erasure" class="md-nav__link">
+    Crypto Erasure
+  </a>
+  
+    <nav class="md-nav" aria-label="Crypto Erasure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#validation-steps" class="md-nav__link">
+    Validation Steps
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="key-protect">Key Protect</h1>
+<h2 id="restricting-access-to-keys">Restricting access to keys</h2>
+<p>Key Protect now supports the ability to assign access to a single key within a Key Protect instance to a given user or access group via Access Policy.  If Kaiser Permanente wishes to maintain a single, shared instance of Key Protect and assign individual keys to any development team, this feature will allow it.  When a user needs to specify a key for encryption of a particular service, that user will only see the instance of Key Protect to which the user has access and the specific key to which the user has been granted access.  In the UI this will filter any dropdowns appropriately and in the CLI or API, access will also be limited.</p>
+<p>Documentation for setting this level of access can be found <a href="https://cloud.ibm.com/docs/services/key-protect?topic=key-protect-grant-access-keys#grant-access-key-level">here</a>.</p>
+<p><em><strong>Note:</strong> Key level access is currently only available via access policy for a user or access group.  It cannot be applied when granting Service-to-Service Authorization, which is access between two IBM services, such as COS and Key Protect.</em></p>
+<h2 id="dual-authorization-delete">Dual Authorization Delete</h2>
+<p>This is a new feature that was added to Key Protect that provides the ability to create an instance level policy requiring that two different users approve the deletion of a key.  In order to delete a key, a user with appropriate permissions must "set the key for deletion", which updates a flag on the key.  After that, another user with permission to do so can delete the key.  The person who does the first authorization cannot actually delete the key; it requires two different users to complete the key deletion.</p>
+<p><em><strong>Note:</strong> At this time the "first" action to set the key for deletion can only be done via API.  Once done, any available option for deleting a key (UI, CLI, API) can be used to actually delete the key.</em></p>
+<p>In order to make it easier to use this new feature IBM has provided (As-Is, not part of the product and not supported) a script that automates some of these actions using the API.  The script can be found <a href="../tools/scripts/keyprotect.html">here</a>.</p>
+<p><strong>Considerations</strong></p>
+<ul>
+<li>The Dual Auth Delete policy is applied at the individual key level, although it can be defined at the service instance level.</li>
+<li>Once the Dual Auth policy is set for a service instance, all keys created after that will automatically inherit that policy.</li>
+<li>Any keys that existed prior to the creation of the service instance level policy will <strong>NOT</strong> inherit the policy.  If need be the policy can be set on individual keys.  <em><strong>Note:</strong> This still needs to be validated.</em></li>
+</ul>
+<h2 id="using-the-script">Using the script</h2>
+<p>The script leverages the Key Protect API via cURL commands.  These commands require an auth token, which can be retrieved via the <code>ibmcloud</code> CLI.  It also uses the CLI to look up information needed by some of the APIs.  The script will automatically get the auth token and use the CLI to look things up, but it does require the user of the script to first login to the CLI in the same terminal/shell where the script will be run.</p>
+<p><strong>Command Options</strong></p>
+<pre><code>NAME:
+keyprotect.sh - Manage features of Key Protect
+
+USAGE:
+keyprotect.sh &lt;key-protect-instance-name&gt; command [options]
+
+COMMANDS:
+-------------------------------------------------------------------------------------------
+
+view-policies           List the current policies for the Key Protect Instance
+enable-dual-auth        Enable the Dual Authorization policy for key deletes for all keys
+disable-dual-auth       Disable the Dual Authorization policy for key deletes for all keys
+view-keys               List the keys in the Key Protect Instance in JSON format
+view-keys-list          List the keys in the Key Protect Instance in list format
+view-deleted-keys       List the deleted keys in the Key Protect Instance in JSON format
+view-deleted-keys-list  List the deleted keys in the Key Protect Instance in list format
+view-key-material       View the material for a standard key
+view-key-policies       View the current polices for the specified key
+import-key              Import a standard or root key
+restore-key             Restore an imported key that has been deleted
+set-key-deletion        Set the specified key for deletion (first auth)
+unset-key-deletion      Unset the specified key for deletion, which removes the first auth
+help, h                 View help for this script
+
+
+Note: For your convenience this command executes the ibmcloud cli to look up certain
+      information needed to perform these tasks.  It requires you to be logged into
+      the ibmcloud cli before you run this command.
+
+</code></pre>
+<h4 id="viewing-policies-for-a-key-protect-instance">Viewing policies for a Key Protect Instance</h4>
+<p><strong>Command</strong></p>
+<p><code>./keyprotect.sh key-protect-dallas-dw view-policies</code></p>
+<p><strong>Output</strong></p>
+<pre><code>Checking current policies for service key-protect-dallas-dw...
+
+{
+  &quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+    &quot;collectionTotal&quot;: 0
+  },
+  &quot;resources&quot;: []
+}
+</code></pre>
+<h4 id="enabling-the-dual-authorization-policy-for-a-key-protect-instance">Enabling the Dual Authorization policy for a Key Protect Instance</h4>
+<p><strong>Command</strong></p>
+<p><code>./keyprotect.sh key-protect-dallas-dw enable-dual-auth</code></p>
+<p><strong>Output</strong></p>
+<pre><code>Enabling Dual Authorization for service key-protect-dallas-dw...
+
+
+Done.
+
+Checking current policies for service key-protect-dallas-dw...
+
+{
+  &quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+    &quot;collectionTotal&quot;: 1
+  },
+  &quot;resources&quot;: [
+    {
+      &quot;policy_type&quot;: &quot;dualAuthDelete&quot;,
+      &quot;policy_data&quot;: {
+        &quot;enabled&quot;: true
+      },
+      &quot;creation_date&quot;: &quot;2020-01-16T20:47:30Z&quot;,
+      &quot;created_by&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;updated_by&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;last_updated&quot;: &quot;2020-01-16T20:47:30Z&quot;
+    }
+  ]
+}
+
+Request complete.
+</code></pre>
+<h4 id="view-keys-in-json-format">View Keys in JSON format</h4>
+<p><strong>Command</strong></p>
+<p><code>./keyprotect.sh key-protect-dallas-dw view-keys</code></p>
+<p><strong>Output</strong></p>
+<pre><code>Listing keys for service key-protect-dallas-dw...
+
+{
+  &quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+    &quot;collectionTotal&quot;: 2
+  },
+  &quot;resources&quot;: [
+    {
+      &quot;id&quot;: &quot;a15604c8-e5c6-4fc9-ac92-5be79bdb1424&quot;,
+      &quot;type&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+      &quot;name&quot;: &quot;dw-test-delete-crk&quot;,
+      &quot;state&quot;: 1,
+      &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:a15604c8-e5c6-4fc9-ac92-5be79bdb1424&quot;,
+      &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;creationDate&quot;: &quot;2020-01-16T21:03:41Z&quot;,
+      &quot;lastUpdateDate&quot;: &quot;2020-01-16T21:03:41Z&quot;,
+      &quot;algorithmMetadata&quot;: {
+        &quot;bitLength&quot;: &quot;256&quot;,
+        &quot;mode&quot;: &quot;CBC_PAD&quot;
+      },
+      &quot;extractable&quot;: false,
+      &quot;imported&quot;: false,
+      &quot;algorithmMode&quot;: &quot;CBC_PAD&quot;,
+      &quot;algorithmBitSize&quot;: 256
+    },
+    {
+      &quot;id&quot;: &quot;f41d77aa-f357-4234-ba46-6aec1b4a7f92&quot;,
+      &quot;type&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+      &quot;name&quot;: &quot;dw-test-cos-crk-1&quot;,
+      &quot;state&quot;: 1,
+      &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:f41d77aa-f357-4234-ba46-6aec1b4a7f92&quot;,
+      &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;creationDate&quot;: &quot;2020-01-17T21:44:39Z&quot;,
+      &quot;lastUpdateDate&quot;: &quot;2020-01-17T21:44:39Z&quot;,
+      &quot;algorithmMetadata&quot;: {
+        &quot;bitLength&quot;: &quot;256&quot;,
+        &quot;mode&quot;: &quot;CBC_PAD&quot;
+      },
+      &quot;extractable&quot;: false,
+      &quot;imported&quot;: false,
+      &quot;algorithmMode&quot;: &quot;CBC_PAD&quot;,
+      &quot;algorithmBitSize&quot;: 256
+    }
+  ]
+}
+
+Request complete.
+</code></pre>
+<h4 id="view-keys-in-list-format">View Keys in list format</h4>
+<p><strong>Command</strong></p>
+<p><code>./keyprotect.sh key-protect-dallas-dw view-keys-list</code></p>
+<p><strong>Output</strong></p>
+<pre><code>Listing keys for service key-protect-dallas-dw...
+
+name                id                                    crn
+dw-test-delete-crk  a15604c8-e5c6-4fc9-ac92-5be79bdb1424  crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:a15604c8-e5c6-4fc9-ac92-5be79bdb1424
+dw-test-cos-crk-1   f41d77aa-f357-4234-ba46-6aec1b4a7f92  crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:f41d77aa-f357-4234-ba46-6aec1b4a7f92
+
+Request complete.
+
+</code></pre>
+<h4 id="view-deleted-keys-in-json-format">View Deleted Keys in JSON Format</h4>
+<p><strong>Command</strong></p>
+<p><code>./keyprotect.sh key-protect-dallas-dw view-deleted-keys</code></p>
+<p><strong>Output</strong></p>
+<pre><code>Listing keys for service key-protect-dallas-dw...
+
+Values for State field:
+-------------------------
+0  Pre-activation
+1  Active
+2  Suspended
+3  Deactivated
+5  Destroyed
+
+{
+  &quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+    &quot;collectionTotal&quot;: 4
+  },
+  &quot;resources&quot;: [
+    {
+      &quot;type&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+      &quot;id&quot;: &quot;38d3c46d-0f94-4843-ba36-9ac6c08c4c3c&quot;,
+      &quot;name&quot;: &quot;dw-ui-test-crk-1&quot;,
+      &quot;state&quot;: 5,
+      &quot;extractable&quot;: false,
+      &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:38d3c46d-0f94-4843-ba36-9ac6c08c4c3c&quot;,
+      &quot;imported&quot;: false,
+      &quot;creationDate&quot;: &quot;2020-01-16T22:40:15Z&quot;,
+      &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;algorithmType&quot;: &quot;AES&quot;,
+      &quot;algorithmMetadata&quot;: {
+        &quot;bitLength&quot;: &quot;256&quot;,
+        &quot;mode&quot;: &quot;CBC_PAD&quot;
+      },
+      &quot;algorithmBitSize&quot;: 256,
+      &quot;algorithmMode&quot;: &quot;CBC_PAD&quot;,
+      &quot;lastUpdateDate&quot;: &quot;2020-01-16T22:40:15Z&quot;,
+      &quot;keyVersion&quot;: {
+        &quot;id&quot;: &quot;38d3c46d-0f94-4843-ba36-9ac6c08c4c3c&quot;
+      },
+      &quot;dualAuthDelete&quot;: {
+        &quot;enabled&quot;: true,
+        &quot;keySetForDeletion&quot;: true,
+        &quot;authExpiration&quot;: &quot;2020-01-23T22:41:02Z&quot;
+      }
+    },
+    {
+      &quot;type&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+      &quot;id&quot;: &quot;4b559191-e10e-4bf6-9891-9af1948b55f7&quot;,
+      &quot;name&quot;: &quot;dw-test-import-delete-restore-01&quot;,
+      &quot;state&quot;: 5,
+      &quot;extractable&quot;: false,
+      &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:4b559191-e10e-4bf6-9891-9af1948b55f7&quot;,
+      &quot;imported&quot;: true,
+      &quot;creationDate&quot;: &quot;2020-05-01T21:31:47Z&quot;,
+      &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;algorithmType&quot;: &quot;AES&quot;,
+      &quot;algorithmMetadata&quot;: {
+        &quot;bitLength&quot;: &quot;256&quot;,
+        &quot;mode&quot;: &quot;CBC_PAD&quot;
+      },
+      &quot;algorithmBitSize&quot;: 256,
+      &quot;algorithmMode&quot;: &quot;CBC_PAD&quot;,
+      &quot;lastUpdateDate&quot;: &quot;2020-05-01T21:31:47Z&quot;,
+      &quot;keyVersion&quot;: {
+        &quot;id&quot;: &quot;4b559191-e10e-4bf6-9891-9af1948b55f7&quot;
+      },
+      &quot;dualAuthDelete&quot;: {
+        &quot;enabled&quot;: false
+      }
+    },
+    {
+      &quot;type&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+      &quot;id&quot;: &quot;75588eb5-81d4-4cdb-997c-b6deb6be06cf&quot;,
+      &quot;name&quot;: &quot;dw-test-crk-1&quot;,
+      &quot;state&quot;: 5,
+      &quot;extractable&quot;: false,
+      &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:75588eb5-81d4-4cdb-997c-b6deb6be06cf&quot;,
+      &quot;imported&quot;: false,
+      &quot;creationDate&quot;: &quot;2020-01-16T20:53:55Z&quot;,
+      &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;algorithmType&quot;: &quot;AES&quot;,
+      &quot;algorithmMetadata&quot;: {
+        &quot;bitLength&quot;: &quot;256&quot;,
+        &quot;mode&quot;: &quot;CBC_PAD&quot;
+      },
+      &quot;algorithmBitSize&quot;: 256,
+      &quot;algorithmMode&quot;: &quot;CBC_PAD&quot;,
+      &quot;lastUpdateDate&quot;: &quot;2020-01-16T20:53:55Z&quot;,
+      &quot;keyVersion&quot;: {
+        &quot;id&quot;: &quot;75588eb5-81d4-4cdb-997c-b6deb6be06cf&quot;
+      },
+      &quot;dualAuthDelete&quot;: {
+        &quot;enabled&quot;: false
+      }
+    },
+    {
+      &quot;type&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+      &quot;id&quot;: &quot;814f0fa7-d343-4a76-b0c2-9ebb8ecea2c3&quot;,
+      &quot;name&quot;: &quot;${keyName}&quot;,
+      &quot;state&quot;: 5,
+      &quot;extractable&quot;: true,
+      &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:814f0fa7-d343-4a76-b0c2-9ebb8ecea2c3&quot;,
+      &quot;imported&quot;: false,
+      &quot;creationDate&quot;: &quot;2020-05-01T14:37:44Z&quot;,
+      &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;algorithmType&quot;: &quot;AES&quot;,
+      &quot;algorithmMetadata&quot;: {
+        &quot;bitLength&quot;: &quot;256&quot;,
+        &quot;mode&quot;: &quot;CBC_PAD&quot;
+      },
+      &quot;algorithmBitSize&quot;: 256,
+      &quot;algorithmMode&quot;: &quot;CBC_PAD&quot;,
+      &quot;lastUpdateDate&quot;: &quot;2020-05-01T14:37:44Z&quot;,
+      &quot;dualAuthDelete&quot;: {
+        &quot;enabled&quot;: true,
+        &quot;keySetForDeletion&quot;: true,
+        &quot;authExpiration&quot;: &quot;2020-05-08T16:16:10Z&quot;
+      }
+    }
+  ]
+}
+
+</code></pre>
+<h4 id="view-deleted-keys-in-list-format">View Deleted Keys in List Format</h4>
+<p><strong>Command</strong></p>
+<p><code>./keyprotect.sh key-protect-dallas-dw view-deleted-keys-list</code></p>
+<p><strong>Output</strong></p>
+<pre><code>Listing deleted keys for service key-protect-dallas-dw...
+
+Values for State column:
+-------------------------
+0  Pre-activation
+1  Active
+2  Suspended
+3  Deactivated
+5  Destroyed
+
+name                              id                                    state  crn
+dw-ui-test-crk-1                  38d3c46d-0f94-4843-ba36-9ac6c08c4c3c  5      crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:38d3c46d-0f94-4843-ba36-9ac6c08c4c3c
+dw-test-import-delete-restore-01  4b559191-e10e-4bf6-9891-9af1948b55f7  5      crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:4b559191-e10e-4bf6-9891-9af1948b55f7
+dw-test-crk-1                     75588eb5-81d4-4cdb-997c-b6deb6be06cf  5      crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:75588eb5-81d4-4cdb-997c-b6deb6be06cf
+${keyName}                        814f0fa7-d343-4a76-b0c2-9ebb8ecea2c3  5      crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:814f0fa7-d343-4a76-b0c2-9ebb8ecea2c3
+
+Request complete.
+
+</code></pre>
+<h4 id="view-key-policies">View Key Policies</h4>
+<p><strong>Command</strong></p>
+<p><code>./keyprotect.sh key-protect-dallas-dw view-key-policies a15604c8-e5c6-4fc9-ac92-5be79bdb1424</code></p>
+<p><em><strong>Note:</strong> The key-specific commands require an extra parameter, the key id, which can be found in the UI, CLI or API.  If not provided these commands will produce this error:</em></p>
+<pre><code>for view-key-policies a key id is required
+
+USAGE:
+keyprotect.sh [service instance name] view-key-policies [key-id]
+</code></pre>
+<p><strong>Output</strong></p>
+<pre><code>viewing policies for key a15604c8-e5c6-4fc9-ac92-5be79bdb1424...
+
+{
+  &quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+    &quot;collectionTotal&quot;: 1
+  },
+  &quot;resources&quot;: [
+    {
+      &quot;id&quot;: &quot;3b7a1be5-ab6b-4139-b856-a4c0fafc82e8&quot;,
+      &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:policy:3b7a1be5-ab6b-4139-b856-a4c0fafc82e8&quot;,
+      &quot;dualAuthDelete&quot;: {
+        &quot;enabled&quot;: true
+      },
+      &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;creationDate&quot;: &quot;2020-01-16T21:03:41Z&quot;,
+      &quot;updatedBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;lastUpdateDate&quot;: &quot;2020-01-16T21:03:41Z&quot;
+    }
+  ]
+}
+
+Request complete.
+</code></pre>
+<h4 id="set-key-for-deletion">Set Key for Deletion</h4>
+<p><strong>Command</strong></p>
+<p><code>./keyprotect.sh key-protect-dallas-dw set-key-deletion a15604c8-e5c6-4fc9-ac92-5be79bdb1424</code></p>
+<p><strong>Output</strong></p>
+<pre><code>Setting key a15604c8-e5c6-4fc9-ac92-5be79bdb1424 in service key-protect-dallas-dw for deletion...
+
+
+Done.
+
+viewing policies for key a15604c8-e5c6-4fc9-ac92-5be79bdb1424...
+
+{
+  &quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+    &quot;collectionTotal&quot;: 1
+  },
+  &quot;resources&quot;: [
+    {
+      &quot;id&quot;: &quot;3b7a1be5-ab6b-4139-b856-a4c0fafc82e8&quot;,
+      &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:policy:3b7a1be5-ab6b-4139-b856-a4c0fafc82e8&quot;,
+      &quot;dualAuthDelete&quot;: {
+        &quot;enabled&quot;: true
+      },
+      &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;creationDate&quot;: &quot;2020-01-16T21:03:41Z&quot;,
+      &quot;updatedBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;lastUpdateDate&quot;: &quot;2020-01-16T21:05:09Z&quot;
+    }
+  ]
+}
+
+Request complete.
+</code></pre>
+<p><em><strong>Note:</strong> If the key has not been enabled for Dual Auth Delete, the command will return the error below.</em></p>
+<pre><code>Setting key 75588eb5-81d4-4cdb-997c-b6deb6be06cf in service key-protect-dallas-dw for deletion...
+
+{
+  &quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.error+json&quot;,
+    &quot;collectionTotal&quot;: 1
+  },
+  &quot;resources&quot;: [
+    {
+      &quot;errorMsg&quot;: &quot;Action could not be performed on key. Please see `reasons` for more details.&quot;,
+      &quot;reasons&quot;: [
+        {
+          &quot;code&quot;: &quot;NOT_DUAL_AUTH_ERR&quot;,
+          &quot;message&quot;: &quot;The key is not dual auth enabled and cannot be set for deletion&quot;,
+          &quot;status&quot;: 409,
+          &quot;more_info&quot;: &quot;https://cloud.ibm.com/apidocs/key-protect&quot;
+        }
+      ]
+    }
+  ]
+}
+
+Done.
+
+viewing policies for key 75588eb5-81d4-4cdb-997c-b6deb6be06cf...
+
+{
+  &quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+    &quot;collectionTotal&quot;: 0
+  }
+}
+
+Request complete.
+</code></pre>
+<h4 id="unset-key-for-deletion">Unset key for deletion</h4>
+<p>In some cases it may turn out that the first authorization was done in error.  This command can be used to unset the key for deletion, which removes the first authorization.</p>
+<p><strong>Command</strong></p>
+<p><code>./keyprotect.sh key-protect-dallas-dw unset-key-deletion a15604c8-e5c6-4fc9-ac92-5be79bdb1424</code></p>
+<p><strong>Output</strong></p>
+<pre><code>Unsetting key a15604c8-e5c6-4fc9-ac92-5be79bdb1424 in service key-protect-dallas-dw for deletion...
+
+
+Done.
+
+viewing policies for key a15604c8-e5c6-4fc9-ac92-5be79bdb1424...
+
+{
+  &quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.policy+json&quot;,
+    &quot;collectionTotal&quot;: 1
+  },
+  &quot;resources&quot;: [
+    {
+      &quot;id&quot;: &quot;3b7a1be5-ab6b-4139-b856-a4c0fafc82e8&quot;,
+      &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:policy:3b7a1be5-ab6b-4139-b856-a4c0fafc82e8&quot;,
+      &quot;dualAuthDelete&quot;: {
+        &quot;enabled&quot;: true
+      },
+      &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;creationDate&quot;: &quot;2020-01-16T21:03:41Z&quot;,
+      &quot;updatedBy&quot;: &quot;IBMid-110000J6VA&quot;,
+      &quot;lastUpdateDate&quot;: &quot;2020-01-16T21:15:44Z&quot;
+    }
+  ]
+}
+
+Request complete.
+</code></pre>
+<p><em><strong>Note:</strong> Setting or unsetting the key for deletion does NOT affect the policy itself; as seen in the output above the policy is still set to true.  At this time the "set deletion" status and its lastUpdated date do not show up in the API response.  IBM is going to update the API in the next iteration to include these two fields.</em></p>
+<h2 id="deleting-a-key-from-the-ui">Deleting a Key from the UI</h2>
+<p><em><strong>IMPORTANT WARNING:</strong> New functionality for Key Protect has been delivered that will prevent a key from being deleted when using the Key Protect API if that key is being used by any services.  This feature has <strong>NOT YET</strong> been updated in the UI!!!  If you delete the key in the UI and the key (or the Key Protect instance) does <strong>NOT</strong> have Dual Authorization Delete policy enabled, that key <strong>WILL</strong> get deleted, regardless of whether or not is being used.  To protect against this possibility make sure that all Key Protect instances have the Dual Authorization Delete policy enabled and use the <a href="https://cloud.ibm.com/apidocs/key-protect#list-registrations-for-a-key">Registration API</a> before deleting any key to see if it is being used by any services or resources.</em></p>
+<p><em><strong>Note:</strong> The steps below for deleting a kay via the UI assume that the Dual Authorization Policy has been enabled.</em></p>
+<p>If you try to delete a key from the UI and it has not yet been set for deletion you will see an error like this:</p>
+<p><img alt="kp-delete-key-no-prior-auth" src="images/kp-delete-key-no-prior-auth.png" /></p>
+<p>If you try to delete the key after it has been set for deletion and you're the one who did that you will see this error:</p>
+<p><img alt="kp-delete-key-same-user" src="images/kp-delete-key-same-user.png" /></p>
+<p><em><strong>Note:</strong> If you try to delete the key and somebody else set the key for deletion you will be able to delete the key.</em></p>
+<h2 id="viewing-usage-of-keys">Viewing usage of keys</h2>
+<p>It is possible in IBM Cloud to track where Key Protect keys are being used.  When a service is provisioned or configure to use a Key Protect key, it "registers" that usage with Key Protect.  You can see the list of resources using a given key with a new operation in the <a href="https://cloud.ibm.com/apidocs/key-protect#list-registrations-for-a-key">Key Protect API</a>.</p>
+<p><code>GET https://us-south.kms.cloud.ibm.com/api/v2/keys/4442aa89-9749-4cad-9a6e-73a77508a616/registrations</code></p>
+<p>Headers:</p>
+<ul>
+<li>Authorization: 'Bearer <token>'</li>
+<li>bluemix-instance: '<guid of Key Protect instance>'</li>
+</ul>
+<p>The URL endpoint will vary by region, and it contains the GUID of the key.</p>
+<pre><code class="language-json">{
+    &quot;metadata&quot;: {
+        &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.registration+json&quot;,
+        &quot;collectionTotal&quot;: 3
+    },
+    &quot;resources&quot;: [
+        {
+            &quot;keyId&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+            &quot;resourceCrn&quot;: &quot;crn:v1:bluemix:public:cloud-object-storage:global:a/9d5d528aa786af01ce99593a827cd68a:b3f6085f-87fd-4b1a-945f-57ba00958fe8:bucket:dw-kp-bucket-test-registration-api-1578085-01&quot;,
+            &quot;createdBy&quot;: &quot;crn-crn:v1:bluemix:public:cloud-object-storage:global:a/9d5d528aa786af01ce99593a827cd68a:b3f6085f-87fd-4b1a-945f-57ba00958fe8::&quot;,
+            &quot;creationDate&quot;: &quot;2020-03-30T15:44:47Z&quot;,
+            &quot;lastUpdated&quot;: &quot;2020-03-30T15:44:47Z&quot;,
+            &quot;preventKeyDeletion&quot;: false,
+            &quot;keyVersion&quot;: {
+                &quot;id&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+                &quot;creationDate&quot;: &quot;2020-03-30T13:43:29Z&quot;
+            }
+        },
+        {
+            &quot;keyId&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+            &quot;resourceCrn&quot;: &quot;crn:v1:bluemix:public:databases-for-redis:us-south:a/9d5d528aa786af01ce99593a827cd68a:9054779f-16f9-405c-8c1b-5a3cfda2b744::/agentid=pvc-895c12bd-5e11-4f5d-9890-91ffb800bf21&quot;,
+            &quot;createdBy&quot;: &quot;crn-crn:v1:bluemix:public:databases-for-redis:us-south:a/9d5d528aa786af01ce99593a827cd68a:9054779f-16f9-405c-8c1b-5a3cfda2b744::&quot;,
+            &quot;creationDate&quot;: &quot;2020-03-30T13:48:32Z&quot;,
+            &quot;lastUpdated&quot;: &quot;2020-03-30T13:48:32Z&quot;,
+            &quot;preventKeyDeletion&quot;: false,
+            &quot;keyVersion&quot;: {
+                &quot;id&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+                &quot;creationDate&quot;: &quot;2020-03-30T13:43:29Z&quot;
+            }
+        },
+        {
+            &quot;keyId&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+            &quot;resourceCrn&quot;: &quot;crn:v1:bluemix:public:databases-for-redis:us-south:a/9d5d528aa786af01ce99593a827cd68a:9054779f-16f9-405c-8c1b-5a3cfda2b744::/agentid=pvc-e365120e-7839-464d-940a-abd93a9ab5d1&quot;,
+            &quot;createdBy&quot;: &quot;crn-crn:v1:bluemix:public:databases-for-redis:us-south:a/9d5d528aa786af01ce99593a827cd68a:9054779f-16f9-405c-8c1b-5a3cfda2b744::&quot;,
+            &quot;creationDate&quot;: &quot;2020-03-30T13:48:47Z&quot;,
+            &quot;lastUpdated&quot;: &quot;2020-03-30T13:48:47Z&quot;,
+            &quot;preventKeyDeletion&quot;: false,
+            &quot;keyVersion&quot;: {
+                &quot;id&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+                &quot;creationDate&quot;: &quot;2020-03-30T13:43:29Z&quot;
+            }
+        }
+    ]
+}
+</code></pre>
+<p>In the JSON example above, the key is used with two service instances - an instance Databases for Redis and a Cloud Object Storage bucket.  Notice that the Redis instance has two entries; that is because Key Protect registers usage at the resource level, not necessarily at the service instance level.  In the case of Redis, the key is used in two separate PVCs, so there are two registrations, both that have the same value for the <code>createdBy</code> field, which contains the CRN of the Redis instance.  Later in the key's lifecycle, operations on that key (rotation, deletion, crypto erasure) can be tracked by individual resource instance.</p>
+<h2 id="crypto-erasure">Crypto Erasure</h2>
+<p>It is sometimes necessary to rotate Key Protect Keys, whether it be proactive security measures to rotate periodically, or reactive, when it is possible that the key has become compromised.  Key rotation actually involves two steps:</p>
+<ul>
+<li><strong>Key Rotation</strong>: - action initiated in Key Protect to rotate the key.  Key Protect replaces the old material with newly generated material.   Only works for IBM-generated keys today.</li>
+<li><strong>Key Replacement</strong> - action initiated by the service using the key when notified by Key Protect that the key has been rotated.  The service does what it needs to to to replace the old material with the new material.</li>
+</ul>
+<h3 id="validation-steps">Validation Steps</h3>
+<p>To validate the behavior of this feature the following general steps can be followed.</p>
+<p><strong>Prerequisites</strong></p>
+<ul>
+<li>Key Protect Instance with an IBM-generated root key</li>
+<li>a service (i.e. Databases for Redis, Databases for PostGreS, Cloudant, Event Streams, Cloud Object Storage) that was provisioned using the key</li>
+</ul>
+<p><strong>Validation steps</strong></p>
+<ol>
+<li>Use the <a href="https://cloud.ibm.com/apidocs/key-protect#list-registrations-for-a-key">Key Protect API</a> to verify that the key is being used.  In this example, the key is being used for two service instances, one Redis and one ElasticSearch.  The API will return JSON like this:</li>
+</ol>
+<pre><code class="language-json">{
+&quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.registration+json&quot;,
+    &quot;collectionTotal&quot;: 5
+},
+&quot;resources&quot;: [
+    {
+        &quot;keyId&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+        &quot;resourceCrn&quot;: &quot;crn:v1:bluemix:public:databases-for-elasticsearch:us-south:a/9d5d528aa786af01ce99593a827cd68a:82251542-de4d-4bec-bf3c-5a87fae71e04::/agentid=pvc-4061efea-2c14-48b7-b016-86da46238b2b&quot;,
+        &quot;createdBy&quot;: &quot;crn-crn:v1:bluemix:public:databases-for-elasticsearch:us-south:a/9d5d528aa786af01ce99593a827cd68a:82251542-de4d-4bec-bf3c-5a87fae71e04::&quot;,
+        &quot;creationDate&quot;: &quot;2020-03-31T13:15:48Z&quot;,
+        &quot;lastUpdated&quot;: &quot;2020-03-31T13:15:48Z&quot;,
+        &quot;preventKeyDeletion&quot;: false,
+        &quot;keyVersion&quot;: {
+            &quot;id&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+            &quot;creationDate&quot;: &quot;2020-03-30T13:43:29Z&quot;
+        }
+    },
+    {
+        &quot;keyId&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+        &quot;resourceCrn&quot;: &quot;crn:v1:bluemix:public:databases-for-elasticsearch:us-south:a/9d5d528aa786af01ce99593a827cd68a:82251542-de4d-4bec-bf3c-5a87fae71e04::/agentid=pvc-781b92eb-c93a-49b8-96cc-d4b484d3bdeb&quot;,
+        &quot;createdBy&quot;: &quot;crn-crn:v1:bluemix:public:databases-for-elasticsearch:us-south:a/9d5d528aa786af01ce99593a827cd68a:82251542-de4d-4bec-bf3c-5a87fae71e04::&quot;,
+        &quot;creationDate&quot;: &quot;2020-03-31T13:15:44Z&quot;,
+        &quot;lastUpdated&quot;: &quot;2020-03-31T13:15:44Z&quot;,
+        &quot;preventKeyDeletion&quot;: false,
+        &quot;keyVersion&quot;: {
+            &quot;id&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+            &quot;creationDate&quot;: &quot;2020-03-30T13:43:29Z&quot;
+        }
+    },
+    {
+        &quot;keyId&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+        &quot;resourceCrn&quot;: &quot;crn:v1:bluemix:public:databases-for-elasticsearch:us-south:a/9d5d528aa786af01ce99593a827cd68a:82251542-de4d-4bec-bf3c-5a87fae71e04::/agentid=pvc-85b7b18d-e186-4a0e-be9c-09343571914e&quot;,
+        &quot;createdBy&quot;: &quot;crn-crn:v1:bluemix:public:databases-for-elasticsearch:us-south:a/9d5d528aa786af01ce99593a827cd68a:82251542-de4d-4bec-bf3c-5a87fae71e04::&quot;,
+        &quot;creationDate&quot;: &quot;2020-03-31T13:15:44Z&quot;,
+        &quot;lastUpdated&quot;: &quot;2020-03-31T13:15:44Z&quot;,
+        &quot;preventKeyDeletion&quot;: false,
+        &quot;keyVersion&quot;: {
+            &quot;id&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+            &quot;creationDate&quot;: &quot;2020-03-30T13:43:29Z&quot;
+        }
+    },
+    {
+        &quot;keyId&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+        &quot;resourceCrn&quot;: &quot;crn:v1:bluemix:public:databases-for-redis:us-south:a/9d5d528aa786af01ce99593a827cd68a:9054779f-16f9-405c-8c1b-5a3cfda2b744::/agentid=pvc-895c12bd-5e11-4f5d-9890-91ffb800bf21&quot;,
+        &quot;createdBy&quot;: &quot;crn-crn:v1:bluemix:public:databases-for-redis:us-south:a/9d5d528aa786af01ce99593a827cd68a:9054779f-16f9-405c-8c1b-5a3cfda2b744::&quot;,
+        &quot;creationDate&quot;: &quot;2020-03-30T13:48:32Z&quot;,
+        &quot;lastUpdated&quot;: &quot;2020-03-30T13:48:32Z&quot;,
+        &quot;preventKeyDeletion&quot;: false,
+        &quot;keyVersion&quot;: {
+            &quot;id&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+            &quot;creationDate&quot;: &quot;2020-03-30T13:43:29Z&quot;
+        }
+    },
+    {
+        &quot;keyId&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+        &quot;resourceCrn&quot;: &quot;crn:v1:bluemix:public:databases-for-redis:us-south:a/9d5d528aa786af01ce99593a827cd68a:9054779f-16f9-405c-8c1b-5a3cfda2b744::/agentid=pvc-e365120e-7839-464d-940a-abd93a9ab5d1&quot;,
+        &quot;createdBy&quot;: &quot;crn-crn:v1:bluemix:public:databases-for-redis:us-south:a/9d5d528aa786af01ce99593a827cd68a:9054779f-16f9-405c-8c1b-5a3cfda2b744::&quot;,
+        &quot;creationDate&quot;: &quot;2020-03-30T13:48:47Z&quot;,
+        &quot;lastUpdated&quot;: &quot;2020-03-30T13:48:47Z&quot;,
+        &quot;preventKeyDeletion&quot;: false,
+        &quot;keyVersion&quot;: {
+            &quot;id&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+            &quot;creationDate&quot;: &quot;2020-03-30T13:43:29Z&quot;
+        }
+    }
+    ]
+}
+</code></pre>
+<ol>
+<li>Use the Key Protect API to determine the current version of the key:</li>
+</ol>
+<pre><code>{
+&quot;metadata&quot;: {
+    &quot;collectionType&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+    &quot;collectionTotal&quot;: 1
+},
+&quot;resources&quot;: [
+    {
+        &quot;type&quot;: &quot;application/vnd.ibm.kms.key+json&quot;,
+        &quot;id&quot;: &quot;4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+        &quot;name&quot;: &quot;dw-kp-reg-test-crk-1&quot;,
+        &quot;state&quot;: 1,
+        &quot;extractable&quot;: false,
+        &quot;crn&quot;: &quot;crn:v1:bluemix:public:kms:us-south:a/9d5d528aa786af01ce99593a827cd68a:a58587c8-857a-4846-808d-3562de511fd6:key:4442aa89-9749-4cad-9a6e-73a77508a616&quot;,
+        &quot;imported&quot;: false,
+        &quot;creationDate&quot;: &quot;2020-03-30T13:43:29Z&quot;,
+        &quot;createdBy&quot;: &quot;IBMid-110000J6VA&quot;,
+        &quot;algorithmType&quot;: &quot;AES&quot;,
+        &quot;algorithmMetadata&quot;: {
+            &quot;bitLength&quot;: &quot;256&quot;,
+            &quot;mode&quot;: &quot;CBC_PAD&quot;
+        },
+        &quot;algorithmBitSize&quot;: 256,
+        &quot;algorithmMode&quot;: &quot;CBC_PAD&quot;,
+        &quot;lastUpdateDate&quot;: &quot;2020-03-31T14:18:33Z&quot;,
+        &quot;lastRotateDate&quot;: &quot;2020-03-31T14:18:33Z&quot;,
+        &quot;keyVersion&quot;: {
+            &quot;id&quot;: &quot;b959b827-9453-4707-a92b-6e9d632c5b98&quot;,
+            &quot;creationDate&quot;: &quot;2020-03-31T14:18:33Z&quot;
+        },
+        &quot;dualAuthDelete&quot;: {
+            &quot;enabled&quot;: true,
+            &quot;keySetForDeletion&quot;: false
+        },
+        &quot;deleted&quot;: false
+    }
+    ]
+}
+</code></pre>
+<p>Notice the <code>keyVersion</code> object; it shows the id and creation date of the current version of the key.  In this example, the JSON above was obtained <strong>after</strong> the key rotation, so it shows a different version than what appears in the registrations.  </p>
+<ol>
+<li>Go into the Key Protect instance and rotate the key.</li>
+</ol>
+<p><img alt="rotate-the-key" src="images/rotate-the-key.png" /></p>
+<p>Once the key has been rotated you will see a popup saying that it has been done.  This means that Key Protect replaced the material and notified the services about it.</p>
+<p><img alt="key-after-rotation" src="images/key-after-rotation.png" /></p>
+<ol>
+<li>Review the Activity Tracker instance for the region in which the services are provisioned.  Filter by sources, selecting <code>kms</code> and <code>ibm-cloud-databases-prod</code>.  You should see an event from Key Protect (kms) that the key was rotated, and events from ICD that they completed the key replacement.</li>
+</ol>
+<p><img alt="rotate-events-in-at" src="images/rotate-events-in-at.png" /></p>
+<p>Here is the detail for each event:</p>
+<p>Key Rotation:</p>
+<p><img alt="es-rotate-key" src="images/es-rotate-key.png" /></p>
+<p>ElasticSearch:</p>
+<p><img alt="es-update-pvc1" src="images/es-update-pvc1.png" />
+   <img alt="es-update-pvc2" src="images/es-update-pvc2.png" />
+   <img alt="es-update-pvc3" src="images/es-update-pvc3.png" /></p>
+<p>Redis:</p>
+<p><img alt="redis-update-pvc1" src="images/redis-update-pvc1.png" />
+   <img alt="redis-update-pvc2" src="images/redis-update-pvc2.png" /></p>
+<p><em><strong>Note:</strong> if Key Protect doesn't get a report back from a service that the rotation has been completed it will send failure events to Activity Tracker:</em></p>
+<p><img alt="redis-rotate-failure" src="images/redis-rotate-failure.png" /></p>
+<p>In this case, it turns out that there is a defect in the acknowledgement that ICD sends back to Key Protect to indicate that the rotation is complete.  The error message shows that the <code>Ack</code> failed, but the rotation did complete.  The ICD engineering team has already submitted a pull request with a fix for this issue, and as soon as it gets deployed these "ack failures" should no longer occur.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <!--
+  Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+
+
+<!-- Footer -->
+<footer class="md-footer">
+
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+            <div class="md-footer-column">
+                <div class="md-footer-text">Styling and customization credit: <a href="https://cloudnativetoolkit.dev">Cloud Native Toolkit</a></div>
+                <div class="md-footer-text">Site licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div>
+            </div>
+            <div class="md-footer-column">
+                <div class="md-footer-text">Have questions? open an issue on <a href="">GitHub</a>.</div>
+
+                <!-- Copyright and theme information -->
+                
+                <div class="md-footer-text">
+                    Copyright © 2021 IBM Technology Garage
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.b0710199.min.js", "version": null}</script>
+    
+    
+  
+      <script src="../assets/javascripts/bundle.76f349be.min.js"></script>
+      
+    
+
+
+  </body>
+</html>

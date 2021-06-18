@@ -33,7 +33,7 @@
     
     
       
-        <title>Overview - IBM Cloud Adoption</title>
+        <title>OpenShift on IBM Cloud - IBM Cloud Adoption</title>
       
     
     
@@ -81,7 +81,7 @@
 
   <!-- Open graph meta tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="IBM Cloud Adoption - Overview" />
+  <meta property="og:title" content="IBM Cloud Adoption - OpenShift on IBM Cloud" />
   <meta property="og:description" content="None" />
   <meta property="og:url" content="None" />
   <meta property="og:image" content="assets/images/banner.png" />
@@ -110,7 +110,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#overview" class="md-skip">
+        <a href="#openshift-on-ibm-cloud" class="md-skip">
           Skip to content
         </a>
       
@@ -140,7 +140,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Overview
+              OpenShift on IBM Cloud
             
           </span>
         </div>
@@ -551,12 +551,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       <label class="md-nav__link" for="__nav_6">
         IBM Cloud Platform
@@ -572,11 +574,166 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../cloud-platform/openshift-ibm-cloud.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          OpenShift on IBM Cloud
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="openshift-ibm-cloud.html" class="md-nav__link md-nav__link--active">
         OpenShift on IBM Cloud
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#base-images" class="md-nav__link">
+    Base Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-ibm-cloud-operator" class="md-nav__link">
+    Using the IBM Cloud Operator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provision-openshift-on-ibm-cloud" class="md-nav__link">
+    Provision OpenShift on IBM Cloud
+  </a>
+  
+    <nav class="md-nav" aria-label="Provision OpenShift on IBM Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-with-terraform" class="md-nav__link">
+    Provisioning with Terraform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-items-from-openshift-catalog" class="md-nav__link">
+    Remove items from OpenShift Catalog
+  </a>
+  
+    <nav class="md-nav" aria-label="Remove items from OpenShift Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-openshift-console" class="md-nav__link">
+    Using the OpenShift Console
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-cli-or-ansible" class="md-nav__link">
+    Using the CLI or Ansible
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forwarding-logs-to-external-logstash-on-premise" class="md-nav__link">
+    Forwarding logs to external LogStash (on-premise)
+  </a>
+  
+    <nav class="md-nav" aria-label="Forwarding logs to external LogStash (on-premise)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-namespace-for-logging" class="md-nav__link">
+    Create the namespace for logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-operator-group-for-the-cluster-logging-operator" class="md-nav__link">
+    Create the Operator Group for the Cluster Logging Operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-the-cluster-logging-operator" class="md-nav__link">
+    Install the Cluster Logging Operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-clusterlogging-custom-resource" class="md-nav__link">
+    Create the ClusterLogging Custom Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-log-forwarding" class="md-nav__link">
+    Configure Log Forwarding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -586,7 +743,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud-platform/ibm-cloud-operator.html" class="md-nav__link">
+      <a href="ibm-cloud-operator.html" class="md-nav__link">
         IBM Cloud Operator
       </a>
     </li>
@@ -598,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../cloud-platform/key-protect.html" class="md-nav__link">
+      <a href="key-protect.html" class="md-nav__link">
         Key Protect
       </a>
     </li>
@@ -617,14 +774,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
       
       <label class="md-nav__link" for="__nav_7">
         IBM Cloud Satellite
@@ -640,21 +795,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../satellite/index.html" class="md-nav__link">
         Overview
       </a>
-      
     </li>
   
 
@@ -727,7 +872,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/prerequisites.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/prerequisites.html" class="md-nav__link">
         Prerequisites
       </a>
     </li>
@@ -739,7 +884,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/create-hosts.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/create-hosts.html" class="md-nav__link">
         Create Hosts
       </a>
     </li>
@@ -751,7 +896,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/create-location.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/create-location.html" class="md-nav__link">
         Create Location
       </a>
     </li>
@@ -763,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/attach-hosts.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/attach-hosts.html" class="md-nav__link">
         Attach Hosts
       </a>
     </li>
@@ -775,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/classic/assign-hosts.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/classic/assign-hosts.html" class="md-nav__link">
         Assign Hosts to Location
       </a>
     </li>
@@ -814,7 +959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ibm-cloud/vpc/create-location.html" class="md-nav__link">
+      <a href="../satellite/ibm-cloud/vpc/create-location.html" class="md-nav__link">
         Create Location
       </a>
     </li>
@@ -859,7 +1004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aws/create-location.html" class="md-nav__link">
+      <a href="../satellite/aws/create-location.html" class="md-nav__link">
         Create Location
       </a>
     </li>
@@ -871,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aws/prerequisites.html" class="md-nav__link">
+      <a href="../satellite/aws/prerequisites.html" class="md-nav__link">
         Prerequisites
       </a>
     </li>
@@ -883,7 +1028,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aws/create-hosts.html" class="md-nav__link">
+      <a href="../satellite/aws/create-hosts.html" class="md-nav__link">
         Create Hosts
       </a>
     </li>
@@ -895,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="aws/assign-hosts.html" class="md-nav__link">
+      <a href="../satellite/aws/assign-hosts.html" class="md-nav__link">
         Assign Hosts to Location
       </a>
     </li>
@@ -919,7 +1064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="openshift/create-cluster.html" class="md-nav__link">
+      <a href="../satellite/openshift/create-cluster.html" class="md-nav__link">
         Create an OpenShift Cluster
       </a>
     </li>
@@ -1047,6 +1192,136 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#base-images" class="md-nav__link">
+    Base Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-ibm-cloud-operator" class="md-nav__link">
+    Using the IBM Cloud Operator
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provision-openshift-on-ibm-cloud" class="md-nav__link">
+    Provision OpenShift on IBM Cloud
+  </a>
+  
+    <nav class="md-nav" aria-label="Provision OpenShift on IBM Cloud">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-with-terraform" class="md-nav__link">
+    Provisioning with Terraform
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove-items-from-openshift-catalog" class="md-nav__link">
+    Remove items from OpenShift Catalog
+  </a>
+  
+    <nav class="md-nav" aria-label="Remove items from OpenShift Catalog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-openshift-console" class="md-nav__link">
+    Using the OpenShift Console
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-the-cli-or-ansible" class="md-nav__link">
+    Using the CLI or Ansible
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forwarding-logs-to-external-logstash-on-premise" class="md-nav__link">
+    Forwarding logs to external LogStash (on-premise)
+  </a>
+  
+    <nav class="md-nav" aria-label="Forwarding logs to external LogStash (on-premise)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-the-namespace-for-logging" class="md-nav__link">
+    Create the namespace for logging
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-operator-group-for-the-cluster-logging-operator" class="md-nav__link">
+    Create the Operator Group for the Cluster Logging Operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-the-cluster-logging-operator" class="md-nav__link">
+    Install the Cluster Logging Operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-the-clusterlogging-custom-resource" class="md-nav__link">
+    Create the ClusterLogging Custom Resource
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#configure-log-forwarding" class="md-nav__link">
+    Configure Log Forwarding
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1058,10 +1333,260 @@
               
                 
                 
-                <h1 id="overview">Overview</h1>
-<p>This site provides documentation and samples for working with IBM Cloud Satellite.  It includes step-by-step
-instructions for creating locations and sample terraform for creating the infrastructure needed for your
-hosts.</p>
+                <h1 id="openshift-on-ibm-cloud">OpenShift on IBM Cloud</h1>
+<p>This page will contain details and documentation about OpenShift 4.x on IBM Cloud as work progresses.</p>
+<h2 id="base-images">Base Images</h2>
+<p>Many IBM Cloud Dedicated customers will be primarily using two images that correspond to two commonly used buildpacks in Cloud Foundry today:</p>
+<ul>
+<li><a href="https://hub.docker.com/_/websphere-liberty">WebSphere Liberty</a> - Both the standard liberty and open liberty images are available now.  The current version is 19.0.0.2, with many older versions available in the repo.  The current version of the buildpack also uses 19.0.0.2.</li>
+<li><a href="https://hub.docker.com/_/node/">Node.js</a> - IBM is no longer delivering builds of Node.js for buildpacks and is not delivering any images; instead IBM is providing support for the community buid.</li>
+</ul>
+<p>An IBM Team (the Cloud Engagement Hub) has built a guide for customizing images prior to loading them into an enterprise registry:
+<a href="https://medium.com/cloud-engagement-hub/so-you-want-customized-websphere-container-images-heres-how-42f0e598733f">https://medium.com/cloud-engagement-hub/so-you-want-customized-websphere-container-images-heres-how-42f0e598733f</a></p>
+<h2 id="operators">Operators</h2>
+<h3 id="using-the-ibm-cloud-operator">Using the IBM Cloud Operator</h3>
+<p>The IBM Cloud Operator is used to create services in IBM Cloud (i.e. Cloudant, PostGreSQL, Redis, etc.) and bindings in an OpenShift project that contain the credentials needed to programmatically access the service.</p>
+<p>The <a href="">IBM Cloud Operator</a> can be found on <a href="https://operatorhub.io/operator/ibmcloud-operator">operatorhub.io</a>.  It is currently in the alpha channel.  It may not appear in the OperatorHub Console in OpenShift right away after a new cluster is provisioned.  There is post-provisioning configuration that will update the OperatorHub Console.  If you don't see it right away and this is a new cluster, please wait awhile and look again.</p>
+<p>For more information see the <a href="../ibm-cloud-operator">Operators</a> page in this wiki.</p>
+<h2 id="provision-openshift-on-ibm-cloud">Provision OpenShift on IBM Cloud</h2>
+<p>As of June 16, 2020 OpenShift on IBM Cloud is now generally available on VPC Gen 2!  It is now possible to provision a cluster on VPC Gen 2 with only private endpoints and a publicly resolvable but only privately accessible ingress subdomain.  When provisioning with the CLI or Terraform use the <code>disable_public_service_endpoint</code> to provision the cluster with private only networking.  </p>
+<p>Worker pools are required to have a minimum count of 2 nodes per availability zone.  This change was made during the Early Access period, but really applies to all OpenShift clusters.  The UI, CLI and Terraform will all enforce a minimum <code>worker_count</code> of 2.</p>
+<p>One other change that occurred during the Early Access period is that the storage configuration for the OpenShift internal registry was updated to use Cloud Object Storage.  Prior to that the configuration was set to <code>emptyDir: {}</code>, which used ephemeral storage on the worker nodes.  Images would be stored on the nodes, and if the node was rebooted or replaced the images would be lost.</p>
+<p>With the GA release cluster provisioning requires you to provide a valid CRN for a Cloud Object Storage instance.  The docs have been updated to reflect new <a href="https://cloud.ibm.com/docs/openshift?topic=openshift-access_reference#cluster_create_permissions">user access permissions</a> required for Cloud Object Storage.  When the cluster is provisioned it will perform the following additional actions:</p>
+<ul>
+<li>Create a new bucket in the COS instance (US-Geo, Standard tier)</li>
+<li>Create Service Credentials (including HMAC)</li>
+<li>Configure the Image Registry to use the bucket for storage of images.</li>
+</ul>
+<p>If for any reason these steps fail and the cluster is not able to access the instance or the bucket it will "fail gracefully" and revert back to the <code>emptyDir: {}</code> configuration.  If that happens there are instructions in the <a href="https://cloud.ibm.com/docs/openshift?topic=openshift-cs_troubleshoot#ts_cos_bucket_cluster_create">troubleshooting docs</a> for how to manually configure the cluster to use a bucket once the problems have been resolved.</p>
+<h3 id="provisioning-with-terraform">Provisioning with Terraform</h3>
+<p>The IBM Terraform Provider now supports OpenShift on IBM Cloud in VPC Gen 2 as of <a href="https://github.com/IBM-Cloud/terraform-provider-ibm/releases">v1.8.0</a>.  It includes support for the new <code>cos_instance_crn</code> parameter that is required for OpenShift clusters.</p>
+<p>Examples for provisioning a cluster can be found <a href="https://github.com/IBM-Cloud/terraform-provider-ibm/tree/master/examples/ibm-cluster/roks-on-vpc-gen2">here</a>.</p>
+<p>Here is example terraform that was used to perform validation testing:</p>
+<p><strong>Provider</strong></p>
+<pre><code class="language-tf">variable &quot;ibmcloud_api_key&quot; {}
+
+provider &quot;ibm&quot; {
+    generation = var.generation
+    region     = var.region
+    version    = &quot;~&gt; 1.8&quot;
+    ibmcloud_api_key = var.ibmcloud_api_key
+}
+</code></pre>
+<p><strong>Variables</strong></p>
+<pre><code class="language-tf">variable &quot;environment&quot; {
+    default = &quot;sandbox&quot;
+}
+
+variable &quot;vpc_name&quot; {
+    default = &quot;sandbox-dallas&quot;
+}
+
+variable &quot;vpc_resource_group&quot; {
+    default = &quot;vpc-sandbox&quot;
+}
+
+variable &quot;adm_resource_group&quot; {
+    default = &quot;account-admin-services&quot;
+}
+
+variable &quot;env_resource_group&quot; {
+    default = &quot;sandbox-tf-env&quot;
+}
+
+variable &quot;region&quot; {
+    default = &quot;us-south&quot;
+}
+
+variable &quot;generation&quot; {
+    default = 2
+}
+</code></pre>
+<p><strong>Main</strong></p>
+<pre><code class="language-tf">data &quot;ibm_resource_group&quot; &quot;vpc_resource_group&quot; {
+    name = &quot;${var.vpc_resource_group}&quot;
+}
+
+data &quot;ibm_resource_group&quot; &quot;adm_resource_group&quot; {
+    name = &quot;${var.adm_resource_group}&quot;
+}
+
+data &quot;ibm_resource_group&quot; &quot;env_resource_group&quot; {
+    name = &quot;${var.env_resource_group}&quot;
+}
+
+data &quot;ibm_resource_group&quot; &quot;cos_group&quot; {
+  name = &quot;roks-cos-test-deleteme&quot;
+}
+
+
+data &quot;ibm_resource_instance&quot; &quot;cos_instance&quot; {
+  name              = &quot;cos-roks-internal-registry-test&quot;
+  resource_group_id = data.ibm_resource_group.cos_group.id
+  service           = &quot;cloud-object-storage&quot;
+}
+
+##############################################################################
+# Create OCP Cluster
+##############################################################################
+resource &quot;ibm_container_vpc_cluster&quot; &quot;app_cluster2&quot; {
+    name                            = &quot;${var.environment}-tf-02&quot;
+    vpc_id                          = &quot;r006-a1705bea-d7ab-429c-8e17-00d21c6ffe83&quot;
+    flavor                          = &quot;bx2.4x16&quot;
+    kube_version                    = &quot;4.3_openshift&quot;
+    worker_count                    = &quot;2&quot;
+    entitlement                     = &quot;cloud_pak&quot;
+    wait_till                       = &quot;MasterNodeReady&quot;
+    disable_public_service_endpoint = false
+    cos_instance_crn                = data.ibm_resource_instance.cos_instance.id
+    resource_group_id               = data.ibm_resource_group.env_resource_group.id
+    tags                            = [&quot;env:${var.environment}&quot;,&quot;vpc:${var.vpc_name}&quot;]
+    zones {
+        subnet_id = &quot;0717-c63180ac-2765-4f91-b184-9373fb1514f2&quot;
+        name      = &quot;${var.region}-1&quot;
+    }
+
+}
+</code></pre>
+<h2 id="remove-items-from-openshift-catalog">Remove items from OpenShift Catalog</h2>
+<p>This came up in a discussion with KP where we landed on the "Add" page in the Developer view of the OpenShift Console.</p>
+<p><img alt="developer-add-tiles" src="images/developer-add-tiles.png" /></p>
+<p>If you click on "From Catalog" or "Database" you get taken to a Developer Catalog.  Kaiser Permanente would like to completely remove the Developer Catalog, or at least remove all of the items in it.</p>
+<p>The items that show up in the "From Catalog" image above are controlled by the <a href="">Samples Operator</a>.  Control over what shows up can be managed using <a href="https://docs.openshift.com/container-platform/4.3/openshift_images/configuring-samples-operator.html#samples-operator-configuration_configuring-samples-operator">Samples Operator configuration parameters</a>.  Specifically, if the <code>managementState</code> parameter is changed from <code>Managed</code> to <code>Removed</code> the set of managed imagestreams and templates in the <code>openshift</code> namespace are removed from the catalog.  </p>
+<h3 id="using-the-openshift-console">Using the OpenShift Console</h3>
+<p>You can access the Samples Operator configuration using these <a href="https://docs.openshift.com/container-platform/4.3/openshift_images/configuring-samples-operator.html#samples-operator-crdconfiguring-samples-operator">instructions</a>.</p>
+<p>It can also be viewed and changed from the UI using the Administrator -&gt; Administration -&gt; Custom Resource Definitions panel.  Click on the <code>Config</code> CRD for <code>samples.operator.openshift.io</code>.</p>
+<p><img alt="config-crd-samples-operator" src="images/config-crd-samples-operator.png" /></p>
+<p>Go to the Instances tab and click on <code>cluster</code>.</p>
+<p><img alt="crd-samples-operator-instances" src="images/crd-samples-operator-instances.png" /></p>
+<p>Go to the YAML tab and change the <code>managementState</code> parameter from <code>Managed</code> to <code>Removed</code>:</p>
+<p><img alt="crd-samples-operator-instance-yaml" src="images/crd-samples-operator-instance-yaml.png" /></p>
+<p>Click Save.  Then you can go back to the Developer view, click Add and click on the From Catalog tile.  The panel should be empty.</p>
+<p>A variation of this option would be to set the <code>skippedTemplates</code> parameter.  This parameter tells the operator to ignore the templates in the list provided as the parameter's value.  This is an easy way to drop a few charts from the catalog.</p>
+<p>The configuration above (setting <code>managedState</code> to <code>Removed</code>) only affects the templates managed by the Samples operator.  It will ignore any templates that a cluster administrator has added.  For this reason, if there is need to remove most of the ones in the catalog but leave a few in, you can export the charts you want to keep, then set the <code>managedState</code> to <code>Removed</code>, then import back in the templates that you want to add back in.</p>
+<p>To export templates go to the <code>openshift</code> project in the <code>Administrator</code> view and search for <code>Template</code> Custom Resources.</p>
+<p><img alt="developer-catalog-templates" src="images/developer-catalog-templates.png" /></p>
+<p>Click on the template you want to export, go to the YAML tab and copy/paste the yaml to a file.  To do it with <code>oc</code> target the <code>openshift</code> project and run this command (using 3scale-gateway as an example):</p>
+<pre><code>oc get template 3scale-gateway -o yaml &gt; 3scale-gateway.yaml
+</code></pre>
+<h3 id="using-the-cli-or-ansible">Using the CLI or Ansible</h3>
+<p>Here is the patch command to use.  I created a file called <code>disablecatalog.yml</code> with this content:</p>
+<pre><code class="language-yaml">spec:
+  managementState: Removed
+</code></pre>
+<p>Then I made sure I was logged into <code>oc</code>  in a terminal and ran this command:</p>
+<pre><code class="language-bash">oc patch configs.samples.operator.openshift.io/cluster --type merge --patch &quot;$(cat disablecatalog.yml)&quot;
+</code></pre>
+<p>The command will return this:  <code>config.samples.operator.openshift.io/cluster patched</code></p>
+<p>After a minute or two the operator will finish removing the content and it will be gone from the <code>From Catalog</code> page.</p>
+<p><img alt="disabled-catalog" src="images/disabled-catalog.png" /></p>
+<p><em><strong>Note:</strong> Even with the tiles removed from the Samples catalog there may still be tiles for any operators that are installed in the cluster.  See my comments above for more information about the object that gets patched.</em></p>
+<p>This <a href="https://us-east.git.cloud.ibm.com/raj_balasubramanian/kaiser-cloudnative-program/tree/master/tools/playbooks/disable-developer-catalog">Ansible playbook</a> will also apply the patch.</p>
+<h2 id="forwarding-logs-to-external-logstash-on-premise">Forwarding logs to external LogStash (on-premise)</h2>
+<p>These instructions can be run from a command line using <code>oc</code> authenticated to the target cluster.  They were derived from the OpenShift documentation for <a href="https://docs.openshift.com/container-platform/4.3/logging/cluster-logging-deploying.html#cluster-logging-deploy-clo-cli_cluster-logging-deploying">installing the Cluster Logging Operator using the CLI</a>.  Here is an <a href="https://github.com/dwakeman/ocp-cluster-config">ansible playbook</a> that was also used during testing.</p>
+<h3 id="create-the-namespace-for-logging">Create the namespace for logging</h3>
+<p>Create a file named <code>logging_namespace.yml</code> with the following content:</p>
+<pre><code class="language-yaml">apiVersion: v1
+kind: Namespace
+metadata:
+  name: openshift-logging 
+  annotations:
+    openshift.io/node-selector: &quot;&quot; 
+  labels:
+    openshift.io/cluster-monitoring: &quot;true&quot;
+</code></pre>
+<p>Run this command to create the namespace:</p>
+<p><code>oc create -f logging_namespace.yml</code></p>
+<h3 id="create-the-operator-group-for-the-cluster-logging-operator">Create the Operator Group for the Cluster Logging Operator</h3>
+<p>Create a file named <code>og-clo.yml</code> with the following content:</p>
+<pre><code class="language-yaml">apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: cluster-logging
+  namespace: openshift-logging 
+spec:
+  targetNamespaces:
+  - openshift-logging 
+</code></pre>
+<p>Run this command:</p>
+<p><code>oc create -f og-clo.yml</code></p>
+<h3 id="install-the-cluster-logging-operator">Install the Cluster Logging Operator</h3>
+<p>Create a file named <code>clo_subscription.yml</code> with this content:</p>
+<pre><code class="language-yaml">apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: cluster-logging
+  namespace: openshift-logging 
+spec:
+  channel: &quot;4.3&quot; 
+  name: cluster-logging
+  source: redhat-operators 
+  sourceNamespace: openshift-marketplace
+</code></pre>
+<p>Run this command:</p>
+<p><code>oc create -f clo_subscription.yml</code></p>
+<p>At this point the Cluster Logging Operator should be installed.  Verify that the installation succeeded by viewing the <code>Installed Operators</code> page in the <code>openshift-logging</code> project in the web console.</p>
+<h3 id="create-the-clusterlogging-custom-resource">Create the ClusterLogging Custom Resource</h3>
+<p>This custom resource tells the operator how to configure cluster logging.  A "full stack" configuration includes a highly-available ElasticSearch cluster, fluentd and Kibana for viewing logs.  Since Kaiser Permanente is going to be shipping logs on-premise to Splunk (via LogStash) the full stack is not required.  </p>
+<p>Create a file named <code>clusterlogging.yml</code> with the following content:</p>
+<pre><code class="language-yaml">apiVersion: logging.openshift.io/v1
+kind: ClusterLogging
+metadata:
+  name: instance
+  namespace: openshift-logging
+  annotations:
+    clusterlogging.openshift.io/logforwardingtechpreview: enabled
+spec:
+  managementState: Managed
+  logStore:
+    type: elasticsearch
+    elasticsearch:
+      # no elasticsearch pods
+      nodeCount: 0
+  visualization:
+    type: kibana
+    kibana:
+      # no kibana pods
+      replicas: 0
+  curation:
+    type: curator
+    curator:
+      # schedule the cron job to never run curator
+      schedule: &quot;* * 31 2 *&quot;
+  collection:
+    logs:
+      type: fluentd
+      fluentd: {}
+</code></pre>
+<p><em><strong>Note:</strong> This configuration was originally tested with the expectation that at least one ElasticSearch pod would be required.  The settings above in the ElasticSearch section would create a pod using the minimum CPU, memory and storage that would still run. During testing it was discovered that this configuration would work without ElasticSearch at all, so the nodeCount is set to 0, but the minimal configuration is still included for reference.</em></p>
+<p>This configuration will not install or configure ElasticSearch, and it will create a Kibana deployment with 0 replicas.  </p>
+<p>Run this command:</p>
+<p><code>oc create -f clusterlogging.yml</code></p>
+<h3 id="configure-log-forwarding">Configure Log Forwarding</h3>
+<p>At this point the fluentd daemonset has been created and fluentd pods are running but they have nowhere to send the logs.  The <code>LogForwarding</code> custom resource provides the additional configuration to set up log forwarding to LogStash.  When you create the <code>LogForwarding</code> custom resource in this step, the fluentd pods will automatically be deleted and recreated by the operator to pick up the changes.  The same thing happens if you delete the <code>LogForwarding</code> custom resource.</p>
+<p>Create a file named <code>logforwarding.yml</code> with the following content:</p>
+<p><em><strong>NOTE:</strong> Be sure to update the <code>endpoint</code> parameter with the url for the on-premise logstash server.</em></p>
+<pre><code class="language-yaml">apiVersion: logging.openshift.io/v1alpha1
+kind: LogForwarding
+metadata:
+  name: instance
+  namespace: openshift-logging
+spec:
+  disableDefaultForwarding: true
+  outputs:
+    - endpoint: 'host:port'
+      name: insecureforward
+      type: forward
+  pipelines:
+    - inputSource: logs.app
+      name: container-logs
+      outputRefs:
+        - insecureforward
+</code></pre>
+<p><em><strong>Disclaimer:</strong> This is a test configuration that uses insecure communication between the fluentd pods and the logstash server.  Be sure to update the configuration to do secure forwarding.  Details can be found in the <a href="https://docs.openshift.com/container-platform/4.3/logging/config/cluster-logging-external.html#cluster-logging-collector-log-forward_cluster-logging-external">OpenShift documentation</a>.</em></p>
+<p>Run this command:</p>
+<p><code>oc create -f logforwarding.yml</code></p>
+<p>Once the fluentd pods restart the logs will start flowing to the external server.</p>
                 
               
               
