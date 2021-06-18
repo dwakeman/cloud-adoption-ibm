@@ -1,3 +1,4 @@
-# Overview
-
-This site serves as documentation for work being done for the adoption of IBM Cloud.
+---
+template: home.html
+title: IBM Cloud Adoption
+---
